@@ -1,0 +1,6370 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+:root{
+    --text: #777;
+}
+
+html,
+body{
+    overflow-x: hidden;
+    width: 100%;
+}
+
+
+
+
+.custom-header{
+    position:absolute;
+    width:100%;
+
+    top:20px;
+    z-index:999;
+}
+
+.custom-navbar{
+ background:rgba(255,255,255,.15);
+    backdrop-filter:blur(12px);
+    border-radius:30px;
+   padding:10px 20px;
+   min-height: 60px;
+}
+.logo{
+    width:100px;
+    height: auto;
+}
+.navbar-nav{
+    gap:10px;
+}
+
+.nav-link{
+    color:white;
+    font-size:16px;
+    font-weight:700;
+}
+
+.nav-link:hover{
+    color:rgb(241, 193, 103);
+}
+.dropdown-menu{
+    border:none;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.dropdown-item{
+    padding:15px 25px;
+}
+
+.dropdown-item:hover{
+    background:rgb(241, 193, 103);
+}
+
+/* ===== Navbar Focus Fix ===== */
+
+.nav-link:focus,
+.nav-link:active,
+.dropdown-toggle:focus,
+.dropdown-toggle:active,
+.navbar .dropdown-toggle.show {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: transparent !important;
+    color:rgb(241, 193, 103)!important;
+}
+
+/* Phone Circle */
+.icon-circle{
+    width: 55px;
+    height: 55px;
+    border: 2px solid #f2d96b;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #8b0000;
+    font-size: 24px;
+}
+
+/* Contact Text */
+.contact-info{
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.contact-info small{
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.contact-info a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.contact-info a:hover{
+    color: rgb(241, 193, 103);
+}
+
+/* Contact Button */
+.floating-buttons{
+    margin-left: 20px;
+
+    
+    color: maroon;
+
+    text-decoration: none;
+
+    padding: 12px 12px 12px 30px;
+
+    border-radius: 50px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.floating-whatsapp{
+    
+
+    padding: 10px 15px;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    text-decoration: none;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,.15);
+}
+
+.floating-whatsapp i{
+    color: #25D366;
+    font-size: 26px;
+}
+
+.floating-whatsapp span{
+    color: #2f6d4d;
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.contact-btn:hover{
+    color: #03363d;
+}
+
+.close-icon{
+    font-size:32px;
+    color:#777;
+}
+
+.navbar-toggler{
+    border:none;
+}
+
+.navbar-toggler:focus{
+    box-shadow:none;
+}
+
+
+@media (max-width: 1199px){
+
+    .navbar-nav{
+        gap: 0;
+    }
+
+    .dropdown-menu{
+        position: static !important;
+        float: none;
+        width: 100%;
+        border: none;
+        box-shadow: none;
+        background: transparent;
+        padding-left: 20px;
+        display: none;
+    }
+
+    .dropdown-menu.show{
+        display: block;
+    }
+
+    .dropdown.mobile-open > .dropdown-menu{
+        display: block !important;
+    }
+
+    .dropdown-item{
+        color: white;
+        padding: 10px 0;
+    }
+
+    .dropdown-item:hover{
+        background: transparent;
+        color: rgb(241,193,103);
+    }
+
+    .nav-item{
+        border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .nav-link{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+@media (max-width:1199px){
+
+    /* Logo */
+    .navbar-brand{
+        position: static;
+        z-index: 100000;
+        padding: 0;
+        margin: 0;
+    }
+
+    .logo{
+        width: 88px;
+        display: block;
+    }
+
+    /* Hamburger / Close Button */
+    .navbar-toggler{
+        position: static;
+        z-index: 100000;
+        border: none;
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .navbar-toggler:focus{
+        box-shadow: none;
+    }
+
+    /* Menu */
+    .navbar-nav{
+        display: block;
+    }
+
+    .navbar-nav .nav-item{
+        border-bottom: 1px solid #f1dede;
+    }
+
+    .navbar-nav .nav-link{
+        color: #000 !important;
+
+        font-size: 18px;
+
+        font-weight: 500;
+
+        padding: 18px 0;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Dropdown */
+    .dropdown-menu{
+        position: static !important;
+
+        float: none;
+
+        border: none;
+
+        box-shadow: none;
+
+        background: transparent;
+
+        padding-left: 20px;
+    }
+
+    .dropdown-item{
+        color: #000;
+
+        font-size: 16px;
+
+        padding: 10px 0;
+    }
+
+    /* Hide Desktop Contact */
+    .custom-header .phone-icon,
+    .custom-header .contact-info,
+    .custom-header .contact-btn{
+        display: none !important;
+    }
+}
+@media (max-width:1199px){
+
+    .navbar-collapse{
+        display: none;
+    }
+
+    .navbar-collapse.show{
+        display: block;
+
+        position: fixed;
+        top: -18px;
+        left: 0;
+
+        width: 100%;
+        height:100vh;
+    
+
+        background: #ffffff;
+
+        overflow-y: auto;
+
+        z-index: 99999;
+
+        padding: 120px 25px 40px;
+         
+    }
+
+}
+
+
+
+
+@media(max-width:1399px){
+
+    .contact-info a{
+        font-size: 16px;
+    }
+
+    .contact-btn{
+        padding: 10px 10px 10px 20px;
+        font-size: 16px;
+    }
+
+    .contact-btn span{
+        width: 42px;
+        height: 42px;
+    }
+}
+  
+    
+
+
+/* ==========================
+   HERO SECTION
+========================== */
+
+.hero-slider {
+    position: relative;
+    height:82vh;
+    min-height: 560px;
+    overflow: hidden;
+       
+}
+.hero-slider .carousel,
+.hero-slider .carousel-inner,
+.hero-slider .carousel-item,
+.hero-slider .carousel-item img {
+    height:82vh;
+    min-height: 560px;
+}
+
+
+
+.hero-img {
+    width: 100%;
+    height: 82vh;
+    min-height: 560px;
+    object-fit: cover;
+}
+
+/* Dark Overlay */
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+   /* background: rgba(243, 239, 239, 0.6);*/
+    z-index: 1;
+}
+/*
+.hero-overlay.heavy {
+    background: rgba(0, 0, 0, 0.70);
+}*/
+
+/* Content */
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 80px;
+    transform: translateY(-50%);
+    z-index: 5;
+    
+    max-width: 700px;
+}
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+
+.hero-badge i {
+    color: rgb(241, 193, 103);
+    font-size: 22px;
+}
+/* Heading */
+
+.hero-content h1 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.05;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.hero-content h1 span {
+    display: block;
+    color: rgb(241, 193, 103);
+}
+
+/* Paragraph */
+
+.hero-content p {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+/* ==========================
+   SOCIAL ICONS
+========================== */
+.social-rail {
+    position: absolute; 
+    right: 25px;
+    top: 60%;
+    transform: translateY(-50%);
+
+    z-index: 9999;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+.social-rail a {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.4);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: maroon;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all .3s ease;
+}
+
+.social-rail a:hover {
+    background: rgb(241, 193, 103);
+    color:maroon;
+    transform: scale(1.1);
+}
+.social-rail span {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+
+/* WhatsApp */
+
+
+
+
+
+@media (max-width:768px){
+
+    .floating-buttons{
+        left: 14px;
+        bottom: 18px;
+        gap: 8px;
+    }
+
+    .floating-whatsapp{
+        padding: 9px 12px;
+        border-radius: 10px;
+    }
+
+    .floating-whatsapp span{
+        font-size: 14px;
+    }
+
+    .floating-whatsapp i{
+        font-size: 24px;
+    }
+
+    
+}
+
+/*custom-indicators
+*/
+
+.custom-indicators{
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    left: auto;
+
+    margin: 0;
+    padding: 12px 20px;
+    
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  
+    width: auto;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 50px;
+    z-index: 1;
+}
+
+/* Small Dot */
+.custom-indicators button{
+    width: 10px !important;
+    height: 10px !important;
+    margin: 0 !important;
+    
+    border: none !important;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.8) !important;
+    opacity: 1;
+}
+
+/* Active Circle */
+.custom-indicators button.active{
+    width: 20px !important;
+    height: 20px !important;
+   
+    background: transparent !important;
+    border: 6px solid #ffffff !important;
+}
+
+.section-space{
+    padding: 56px 0;
+}
+
+.about-section {
+    background: #ffffff;
+}
+
+.about-collage {
+    position: relative;
+    min-height: 470px;
+}
+
+.about-img-main {
+    position: relative;
+    z-index: 1;
+    padding-top: 0;
+    width: 75%;
+    height: 520px;
+    object-fit: cover;
+    border-radius: 8px;
+   
+    
+}
+
+.experience-card {
+    position: absolute;
+    right: 6%;
+    top: 25%;
+    color: orange;
+    background: rgb(244, 221, 179); 
+    border-radius: 14px;
+   
+    padding: 20px 34px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: 600;
+    z-index: 6;
+    white-space: nowrap;
+}
+
+
+.experience-card i {
+    font-size: 25px;
+}
+
+.video-card {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 60%;
+    border: 7px solid #ffffff;
+    border-radius: 50% 50% 8px 8px;
+    overflow: hidden;
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+}
+
+.video-card video {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    display: block;
+}
+
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 118px;
+    height: 118px;
+    color: #ffffff;
+    background: rgba(236, 213, 110, 0.72);
+    border: 16px solid rgba(255, 255, 255, 0.34);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 34px;
+    cursor: pointer;
+}
+
+.play-btn i {
+    pointer-events: none;
+}
+
+.section-kicker {
+   color: #838581;
+    font-size: 20px;
+    
+}
+
+.section-kicker i {
+    color:rgb(241, 193, 103);
+    
+}
+
+.about-section h2,
+.deaddiction-section h2,
+.treatment-section h2,
+.contact-section h2 {
+    color: rgb(241, 193, 103);
+    margin: 18px 0;
+    font-size:35px;
+    line-height: 1.12;
+    font-weight: 800;
+}
+
+.about-section p,
+.deaddiction-section p,
+.contact-section p {
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.55;
+}
+
+.rating-row {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+}
+
+.rating-box small {
+    color: #7d817f;
+    margin-right: 12px;
+}
+
+.rating-box small i {
+    color: rgb(241, 193, 103);
+}
+
+.stars {
+    color:orange;
+    background:rgb(243, 204, 132);
+    padding: 2px 8px;
+    font-size: 24px;
+    letter-spacing: 0;
+}
+
+.rating-box p {
+    margin: 14px 0 0;
+}
+
+.deaddiction-section {
+    position: relative;
+    background: linear-gradient(90deg, #ffffff 0 68%, rgba(244, 248, 247, 0.82));
+}
+
+.image-stack {
+    position: relative;
+    min-height: 500px;
+}
+
+.image-stack img {
+    position: absolute;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+}
+
+.stack-one {
+    top: 0;
+    left: 36%;
+    width: 48%;
+    height: 250px;
+}
+
+.stack-two {
+    top: 150px;
+    left: 4%;
+    width: 70%;
+    height: 285px;
+}
+
+.stack-three {
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: 210px;
+}
+
+.benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 34px;
+    margin-top: 22px;
+}
+
+.benefit-grid span {
+    color: var(--text);
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    font-size: 18px;
+    line-height: 1.35;
+}
+
+.benefit-grid i {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    color:maroon;
+    background: rgba(241, 193, 103);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+}
+.about-section .contact-btn,
+.deaddiction-section .contact-btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 0; 
+    padding: 16px 28px;
+    min-height: 60px;
+
+    background: rgb(241, 193, 103);
+    color: #fff;
+    text-decoration: none;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    border-radius: 50px;
+    transition: all 0.3s ease;
+
+    box-shadow: 0 10px 25px rgba(241, 193, 103, 0.35);
+}
+
+.about-section .contact-btn:hover,
+.deaddiction-section .contact-btn:hover{
+    background: #ffffff;
+    color: rgb(241, 193, 103);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.arrow-circle{
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255,255,255,0.25);
+    border-radius: 50%;
+
+    transition: all 0.3s ease;
+}
+
+.about-section .contact-btn:hover .arrow-circle,
+.deaddiction-section .contact-btn:hover .arrow-circle{
+    background: rgb(241, 193, 103);
+    color: #fff;
+}
+
+.arrow-circle i{
+    font-size: 14px;
+}
+/* ==========================
+   TABLET RESPONSIVE
+========================== */
+@media (max-width: 992px) {
+
+    .hero-content{
+        left: 40px;
+        max-width: 600px;
+    }
+
+    .hero-content h1{
+        font-size: 38px;
+    }
+
+    .about-img-main{
+        width: 100%;
+        height: 420px;
+    }
+
+    .about-collage,
+    .image-stack{
+        min-height: 420px;
+    }
+
+    .section-space{
+        padding: 42px 0;
+    }
+   
+    .benefit-grid{
+        grid-template-columns: 1fr;
+    }
+}
+/* ==========================
+   MOBILE RESPONSIVE
+========================== */
+@media (max-width: 768px){
+
+    /* Navbar */
+    .custom-navbar{
+        top: 0;
+    }
+
+    .custom-navbar .container-fluid{
+        border-radius: 0;
+        padding: 10px 15px;
+    }
+
+    /* Hero */
+    .hero-slider,
+    .hero-slider .carousel,
+    .hero-slider .carousel-inner,
+    .hero-slider .carousel-item,
+    .hero-img{
+        height:64vh;
+        min-height: 390px;
+    }
+
+    .hero-content{
+        left: 20px;
+        right: 20px;
+        max-width: 100%;
+        top: 50%;
+    }
+
+    .hero-badge{
+        font-size: 14px;
+        padding: 10px 18px;
+    }
+
+    .hero-content h1{
+        font-size: 32px;
+    }
+
+    .hero-content p{
+        font-size: 16px;
+    }
+
+    /* Social Icons */
+    .social-rail{
+        right: 10px;
+        gap: 10px;
+    }
+
+    .social-rail a{
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
+    }
+
+    .social-rail span{
+        font-size: 14px;
+    }
+    div.social-rail{
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+
+    /* Indicators */
+    .custom-indicators{
+        right: 15px;
+        bottom: 22px;
+        padding: 6px 12px;
+    }
+
+    /* About */
+    .about-collage{
+        min-height: 390px;
+    }
+
+    .about-img-main{
+        width: 100%;
+        height: 360px;
+        padding-top: 0;
+    }
+
+    .experience-card{
+        top: 12px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        padding: 12px 16px;
+        font-size: 15px;
+        z-index: 6;
+    }
+
+    .video-card{
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 78%;
+        margin-top: 0;
+        border: 5px solid #fff;
+        border-radius: 140px 140px 8px 8px;
+        z-index: 2;
+    }
+
+    .video-card video{
+        height: 260px;
+        object-fit: cover;
+    }
+
+    .play-btn{
+        width: 80px;
+        height: 80px;
+        border-width: 10px;
+        font-size: 24px;
+    }
+
+    /* Section Heading */
+    .about-section h2,
+    .deaddiction-section h2,
+    .treatment-section h2,
+    .contact-section h2{
+        font-size: 28px;
+    }
+    
+
+    /* Rating */
+    .rating-row{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    
+
+    /* Benefit */
+    .benefit-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .benefit-grid span{
+        font-size: 16px;
+    }
+
+    .image-stack{
+        min-height: 390px;
+    }
+
+    .stack-one{
+        height: 185px;
+    }
+
+    .stack-two{
+        top: 112px;
+        height: 220px;
+    }
+
+    .stack-three{
+        height: 160px;
+    }
+
+    .section-space{
+        padding: 30px 0;
+    }
+}
+
+/* ==========================  
+   SMALL MOBILE
+========================== */
+@media (max-width:576px){
+
+    .hero-content h1{
+        font-size: 28px;
+    }
+
+    .hero-content p{
+        font-size: 14px;
+    }
+
+    .social-rail{
+        display: none;
+    }
+}
+  
+.rehab-services{
+    background-image: url(assets/image/backgroundimage6.png);
+    padding: 48px 0 26px;
+    margin-bottom: 0;
+    
+}
+
+.services-header{
+    max-width: 1200px;
+    margin: 0 auto 34px;
+}
+
+.services-kicker{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #7b7b7b;
+    font-size: 22px;
+    margin-bottom: 14px;
+}
+
+.services-kicker i{
+    color: rgb(241, 193, 103);
+    font-size: 28px;
+}
+
+.services-header h2{
+    color: rgb(241, 193, 103);
+
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+.services-header p{
+    color: #7b7b7b;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.6;
+     font-weight: 400;
+    margin-bottom: 14px;
+}
+.rehab-carousel-desktop,
+.rehab-carousel-mobile{
+    position: relative;
+     overflow: visible;
+    margin-bottom: 0;
+    padding-bottom: 22px;
+}
+
+.rehab-carousel-mobile{
+    display:none;
+}
+
+.rehab-services .carousel,
+.rehab-services .carousel-inner,
+.rehab-services .carousel-item{
+    height:auto;
+}
+
+.service-card{
+    background:#fff;
+    border-radius:25px;
+    overflow: visible;
+    padding:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    height:100%;
+    transition:.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-10px);
+}
+
+.service-card img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+.service-card h3{
+    color:rgb(241, 193, 103);
+    font-size:24px;
+    font-weight:700;
+    margin-top:16px;
+    margin-bottom: 0;
+    line-height:1.3;
+    padding-bottom: 6px;
+}
+
+.rehab-services .arrow-btn{
+    width:50px;
+    height:50px;
+    background:#fff;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 5px 20px rgba(0,0,0,0.15);
+}
+
+.rehab-services .arrow-btn i{
+    font-size:20px;
+    color:#666;
+}
+
+.rehab-services .carousel-control-prev,
+.rehab-services .carousel-control-next{
+    width: auto;
+    opacity: 1;
+    top: 42%;              /* pehle 50% tha */
+    transform: translateY(-50%);
+    bottom: auto;
+    z-index: 10;
+}
+
+.rehab-services .carousel-control-prev{
+    left: -25px;
+}
+
+.rehab-services .carousel-control-next{
+    right: -25px;
+}
+
+.rehab-services .rehab-card-indicators{
+    position: static;
+    gap: 10px;
+    margin: 14px 0 0;
+}
+
+.rehab-services .rehab-card-indicators button{
+    width:12px !important;
+    height:12px !important;
+    border-radius:50%;
+    background:#bdbdbd !important;
+    border:0 !important;
+    border-top:0 !important;
+    border-bottom:0 !important;
+    background-clip:border-box;
+    margin:0;
+    opacity:1;
+}
+
+.rehab-services .rehab-card-indicators .active{
+    background:rgb(241, 193, 103) !important;
+}
+.rehab-services .carousel-inner{
+    padding-bottom: 0px;
+}
+/* Tablet */
+@media(max-width:991px){
+
+    .service-card img{
+        height:220px;
+    }
+
+    .rehab-services .carousel-control-prev{
+        left:0;
+    }
+
+    .rehab-services .carousel-control-next{
+        right:0;
+    }
+    .service-card h3{
+        font-size:22px;
+    }
+
+    .rehab-services .arrow-btn{
+        width:50px;
+        height:50px;
+    }
+
+    .rehab-services .arrow-btn i{
+        font-size:22px;
+    }
+}
+
+
+
+@media(max-width:992px){
+
+    .services-header h2{
+        font-size: 34px;
+    }
+
+    .services-header p{
+        font-size: 17px;
+    }
+
+}
+@media(max-width:768px){
+
+    .rehab-services{
+        padding: 30px 0 12px;
+    }
+
+    .services-kicker{
+        font-size: 18px;
+    }
+
+    .services-kicker i{
+        font-size: 22px;
+    }
+
+    .services-header h2{
+        font-size: 34px;
+    }
+
+    .services-header p{
+        font-size: 16px;
+        line-height: 1.7;
+        margin-bottom: 10px;
+    }
+
+    .rehab-carousel-desktop{
+        display:none;
+    }
+
+    .rehab-carousel-mobile{
+        display:block;
+    }
+
+    .rehab-carousel-mobile .service-card{
+        height:auto;
+        min-height:0;
+        padding-bottom:16px;
+    }
+
+    .rehab-services .service-card img{
+        height:190px;
+    }
+
+    .rehab-services .service-card h3{
+        font-size:20px;
+        line-height: 1.25;
+        margin-top:12px;
+        margin-bottom:0;
+        padding-bottom: 4px;
+    }
+
+    .rehab-carousel-mobile{
+        padding-bottom: 10px;
+    }
+
+    .rehab-services .rehab-card-indicators{
+        margin-top: 10px;
+    }
+
+    .rehab-services .carousel-control-prev,
+    .rehab-services .carousel-control-next{
+        top:44%;
+    }
+
+}
+.treatment-section{
+    background:url(assets/image/backgroundimage10.png) no-repeat center center;
+    position: relative;
+    overflow: hidden;
+    padding: 34px 0 46px;
+    background-color: rgb(178, 160, 119);
+    background-size: cover;
+    margin-bottom: 0px; 
+
+}
+
+
+.treatment-header{
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto 24px;
+    padding-top:0;
+}
+
+.treatment-tag{
+    color: white;
+    font-size: 30px;
+}
+
+.treatment-header h2{
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+    margin: 18px 0;
+    line-height: 1.2;
+}
+
+.treatment-header p{
+    color: rgba(255,255,255,.7);
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 14px;
+}
+
+.treatment-card{
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+    height: 350px;
+  
+    cursor: pointer;
+}
+
+.treatment-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.treatment-card:hover img{
+    transform: scale(1.08);
+}
+.treatment-section .row{
+    position: relative;
+    z-index: 2;
+    margin-top: 0;
+    display: flex;
+   
+}
+
+.card-number{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    background: rgba(255,255,255,.25);
+    backdrop-filter: blur(15px);
+
+    padding: 15px 30px;
+    border-radius: 50px;
+
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+
+    border: 1px solid rgba(255,255,255,.3);
+}
+
+.card-content{
+    position: absolute;
+    left: 0px;
+    right: 20px;
+    bottom: 20px;
+
+    background: rgba(40,40,40,.45);
+    backdrop-filter: blur(15px);
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+}
+@media(max-width:991px){
+
+    .treatment-header h2{
+        font-size: 34px;
+    }
+
+    .treatment-header p{
+        font-size: 16px;
+    }
+
+    .treatment-card{
+        height: 310px;
+    }
+
+    .card-content{
+        font-size: 20px;
+    }
+}
+
+@media(max-width:767px){
+
+    .treatment-section{
+        padding: 78px 0 46px;
+        background-position: center top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow: hidden;
+    }
+
+    .treatment-header{
+        margin-bottom: 18px;
+    }
+
+    .treatment-tag{
+        font-size: 20px;
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    .treatment-header h2{
+        font-size: 30px;
+        line-height: 1.28;
+        margin: 10px 0 18px;
+    }
+
+    .treatment-header p{
+        font-size: 16px;
+        line-height: 1.7;
+        margin-bottom: 16px;
+    }
+
+    .treatment-section .row{
+        --bs-gutter-y: 18px;
+    }
+
+    .treatment-card{
+        height: 250px;
+        border-radius: 20px;
+    }
+
+    .card-number{
+        font-size: 16px;
+        padding: 9px 18px;
+        top: 16px;
+        right: 16px;
+    }
+
+    .card-content{
+        font-size: 18px;
+        left: 12px;
+        right: 12px;
+        bottom: 14px;
+        padding: 16px;
+        border-radius: 16px;
+    }
+}
+  
+
+/* ===========================
+   TESTIMONIAL SECTION
+=========================== */
+
+.testimonial-section{
+    position: relative;
+    padding: 48px 0;
+    background: #f8f8f6;
+    overflow: hidden;
+}
+
+
+/* Top Brush */
+.testimonial-section::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    /*background: url("assets/image/top-brush.png") no-repeat center top;*/
+    background-size: cover;
+}
+
+/* LEFT CONTENT */
+
+.testimonial-tag{
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    
+}
+
+.testimonial-tag img{
+    width: 100px;
+
+}
+
+.testimonial-tag span{
+    font-size: 20px;
+    font-weight:400;
+    color: #777;
+}
+
+.testimonial-left h2{
+    font-size: 32px;
+    font-weight: 400;
+    color: rgb(241, 193, 103);
+    line-height: 1.12;
+    
+}
+
+.quote-circle{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: rgb(241, 193, 103);
+    color: maroon;
+    border-radius: 50%;
+    font-size: 16px;
+    margin: 0 10px;
+}
+
+.testimonial-left p{
+    font-size: 16px;
+    font-weight:400;
+    line-height: 1.8;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+/* 99% REVIEW */
+
+.review-box{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    
+}
+
+.review-box h3{
+    font-size: 42px;
+    color: #999;
+    font-weight: 600;
+    margin: 0;
+}
+
+.review-box img{
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.review-box span{
+    font-size: 24px;
+    font-weight: 600;
+    color: rgb(241, 193, 103);
+}
+
+/* REVIEW BUTTON */
+
+.review-btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 20px;
+    border: 2px solid #d8dddd;
+    border-radius: 25px;
+    text-decoration: none;
+    color: rgb(241, 193, 103);
+    transition: 0.3s;
+}
+
+.review-btn:hover{
+    background: rgb(241, 193, 103);
+    color: #fff;
+}
+
+.review-icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff3bf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+}
+
+/* ===========================
+   SLIDER RIGHT SIDE
+=========================== */
+
+.testimonial-slider-wrapper{
+    position: relative;
+    min-height: 430px;
+}
+
+/* Background Stack Cards */
+
+.stack-card{
+    position: absolute;
+    border-radius: 35px;
+    background: rgb(237, 230, 217);
+    backdrop-filter: blur(8px);
+}
+
+.stack-1{
+    width: 82%;
+    height: 320px;
+    left: 0;
+    top: 60px;
+}
+
+.stack-2{
+    width: 82%;
+    height: 320px;
+    left: 50px;
+    top: 24px;
+}
+
+.stack-3{
+    width: 82%;
+    height: 320px;
+    left: 100px;
+    top: 78px;
+}
+
+/* MAIN CARD */
+
+.active-card{
+    position: absolute;
+    top: 0;
+    left: 90px;
+    width: 90%;
+    background:rgb(178, 160, 119);
+    border-radius: 35px;
+    padding: 30px;
+    z-index: 10;
+    box-shadow: 0 20px 60px rgba(0,0,0,.15);
+}
+
+/* IMAGE */
+
+.testimonial-image img{
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 28px;
+}
+
+/* CONTENT */
+
+.testimonial-content{
+    padding: 15px 20px 15px 40px;
+    color: #fff;
+}
+
+.testimonial-content .rating-box{
+    display: inline-block;
+    border: 2px solid rgba(255,255,255,.25);
+    border-radius: 50px;
+    padding: 12px 24px;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 22px;
+}
+
+.testimonial-content .rating-box span{
+    color: #f7d56a;
+}
+
+.testimonial-content p{
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 24px;
+}
+
+.testimonial-content h4{
+    font-size: 35px;
+    font-weight: 600;
+    margin: 0;
+}
+/* Stack Cards Animation */
+
+.stack-card{
+    transition: all 0.6s ease;
+}
+
+/* Active Animation */
+
+.stack-animate-1{
+    transform: translateY(-15px);
+}
+
+.stack-animate-2{
+    transform: translateY(10px);
+}
+
+.stack-animate-3{
+    transform: translateY(-8px);
+}
+
+
+/* Main Card Smooth Effect */
+
+.active-card{
+    transition: all 0.5s ease;
+}
+
+/* ===========================
+   TABLET RESPONSIVE
+=========================== */
+
+@media(max-width:991px){
+
+    .testimonial-section{
+        padding: 34px 0;
+    }
+
+    .testimonial-left{
+        text-align: center;
+    }
+
+    .testimonial-left h2{
+        font-size: 38px;
+    }
+
+    .review-box{
+        justify-content: center;
+    }
+
+    .testimonial-slider-wrapper{
+        min-height: auto;
+    }
+
+    .active-card{
+        position: relative;
+        left: 0;
+        width: 100%;
+        top: auto;
+    }
+
+    .stack-1,
+    .stack-2,
+    .stack-3{
+        display: none;
+    }
+
+    .testimonial-content{
+        padding: 30px 10px;
+    }
+}
+#testimonial-img,
+#testimonial-rating,
+#testimonial-text,
+#testimonial-name{
+    transition: all 0.5s ease;
+
+}
+
+/* ===========================
+   MOBILE RESPONSIVE
+=========================== */
+
+@media(max-width:767px){
+
+    .testimonial-section{
+        padding: 30px 0;
+    }
+
+    .testimonial-left h2{
+        font-size: 32px;
+    }
+
+    .quote-circle{
+        width: 44px;
+        height: 44px;
+        font-size: 24px;
+    }
+
+    .testimonial-left p{
+        font-size: 17px;
+    }
+
+    .review-box{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .review-box h3{
+        font-size: 42px;
+    }
+
+    .review-box span{
+        font-size: 22px;
+    }
+
+    .testimonial-slider-wrapper{
+        min-height: auto;
+    }
+
+    .active-card{
+        padding: 14px;
+        border-radius: 26px;
+        overflow: visible;
+    }
+
+    .testimonial-image img{
+        height: auto;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        object-position: center top;
+        border-radius: 22px;
+    }
+
+    .testimonial-content{
+        padding: 22px 8px 6px;
+    }
+
+    .testimonial-content .rating-box{
+        font-size: 20px;
+        padding: 10px 18px;
+        margin-bottom: 25px;
+    }
+
+    .testimonial-content p{
+        font-size: 17px;
+        line-height: 1.65;
+        margin-bottom: 18px;
+    }
+
+    .testimonial-content h4{
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    .review-btn{
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ==========================
+   FAQ SECTION
+========================== */
+
+.faq-section{
+    padding: 42px 0;
+    background:url(assets/image/backgroundimage6.png);
+    overflow: hidden;
+}
+
+/* Left FAQ Box */
+.faq-item{
+    background: #fcfbf9;
+    border-radius: 40px;
+    margin-bottom: 18px;
+    padding: 15px 25px;
+    transition: 0.4s;
+}
+
+.faq-item:hover{
+    transform: translateY(-3px);
+}
+
+/* Question Row */
+.faq-question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Number */
+.faq-number{
+    color: #8D8D8D;
+    font-size: 24px;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+/* Question Text */
+.question-text{
+    color: rgb(241, 193, 103);
+    font-size: 20px;
+    font-weight:400;
+    line-height: 1.4;
+    text-transform: uppercase;
+    flex: 1;
+}
+
+/* Plus Minus Button */
+.faq-toggle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #E6E6E6;
+    background: transparent;
+    color: #9E9E9E;
+    font-size: 28px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.4s;
+    flex-shrink: 0;
+}
+
+/* Active State */
+.faq-item.active .faq-toggle{
+    background: rgb(241, 193, 103);
+    color: #fff;
+    border-color:rgb(241, 193, 103);
+}
+
+/* Answer */
+.faq-answer{
+    margin-top: 16px;
+}
+
+.faq-answer p{
+    color: #1F1F1F;
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+
+/* Hide Closed Answers */
+.faq-item:not(.active) .faq-answer{
+    display: none;
+}
+
+
+/* ==========================
+   RIGHT SIDE CONTENT
+========================== */
+
+.faq-content{
+    padding-left: 40px;
+    position: relative;
+}
+
+/* Tag */
+.faq-tag{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.faq-tag img{
+    width: 35px;
+    height:60px;
+}
+
+.faq-tag span{
+    color: #757575;
+    font-size: 25px;
+   
+}
+
+/* Heading */
+.faq-content h2{
+    color: rgb(241, 193, 103);
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    margin-top: 0;
+    
+}
+
+.question-mark{
+    color: maroon;
+}
+
+/* Description */
+.faq-content p{
+    color: #707070;
+    font-size: 16px;
+    font-weight:400;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+/* Button */
+.faq-btn{
+    width: 100%;
+    max-width: 260px;
+    
+    background: rgb(241, 193, 103);
+    border-radius: 50px;
+
+    padding: 10px 10px 10px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    text-decoration: none;
+}
+
+.faq-btn span{
+    color:maroon;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+/* Arrow Circle */
+.faq-btn-icon{
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+
+    background: maroon;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 34px;
+}
+
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:1199px){
+
+    .faq-content h2{
+        font-size: 38px;
+    }
+
+    .question-text{
+        font-size: 21px;
+    }
+}
+
+@media(max-width:991px){
+
+    .faq-content{
+        padding-left: 0;
+        margin-top: 28px;
+    }
+
+    .faq-content h2{
+        font-size: 36px;
+    }
+
+    .faq-item{
+        padding: 22px;
+    }
+
+    .question-text{
+        font-size: 20px;
+    }
+}
+
+@media(max-width:767px){
+
+    .faq-section{
+        padding: 32px 0;
+    }
+
+    .faq-item{
+        padding: 25px 20px;
+        border-radius: 30px;
+    }
+
+    .question-text{
+        font-size: 17px;
+    }
+
+    .faq-number{
+        font-size: 20px;
+    }
+
+    .faq-toggle{
+        width: 48px;
+        height: 48px;
+        font-size: 28px;
+    }
+
+    .faq-answer p{
+        font-size: 16px;
+    }
+
+    .faq-content h2{
+        font-size: 42px;
+    }
+
+    .faq-content p{
+        font-size: 16px;
+    }
+
+    .faq-btn{
+        padding: 12px 12px 12px 22px;
+    }
+
+    .faq-btn span{
+        font-size: 17px;
+    }
+
+    .faq-btn-icon{
+        width: 55px;
+        height: 55px;
+        font-size: 26px;
+    }
+}
+
+@media(max-width:575px){
+
+    .faq-content h2{
+        font-size: 36px;
+    }
+
+    .question-text{
+        font-size: 15px;
+    }
+}
+
+/* ==========================
+   CONTACT SECTION
+========================== */
+
+.contact-section{
+    padding: 28px 0;
+    background: #f8f8f8;
+    overflow: hidden;
+    margin-bottom: 0;
+    
+}
+
+.contact-row{
+    align-items: stretch !important;
+}
+
+/* Left Image */
+
+.contact-image{
+    height: 100%;
+    
+}
+
+.contact-image img{
+    width: 100%;
+    max-width: none;
+    height: 680px;
+    display:block;
+    object-fit:cover;
+}
+
+/* Right Form Box */
+
+.contact-form-col{
+    display: flex;
+}
+
+.contact-form-box{
+    background:rgb(178, 160, 119);
+    border-radius: 25px;
+    padding: 42px;
+    width: 100%;
+    max-width: none;
+    min-height: 680px;
+    height: 680px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-form-box h2{
+    color: #fff;
+    font-size: 36px;
+    font-weight: 500;
+    margin-top:0;
+}
+
+/* Inputs */
+
+.contact-input,
+.contact-textarea{
+    background: rgba(255,255,255,.08);
+    border: 2px solid rgba(255,255,255,.15);
+    color: #fff;
+    border-radius: 14px;
+    padding: 14px 20px;
+    font-size: 16px;
+    box-shadow: none !important;
+}
+
+.contact-textarea{
+    height:100px;
+    min-height: 100px;
+    resize: none;
+}
+
+.contact-input::placeholder,
+.contact-textarea::placeholder{
+    color: rgba(255,255,255,.9);
+}
+
+.contact-input:focus,
+.contact-textarea:focus{
+    background: rgba(255,255,255,.08);
+    border-color: #F2D96B;
+    color: #fff;
+}
+
+/* Submit Button */
+
+.submit-btn{
+    border: none;
+    background:rgb(241, 193, 103);
+    border-radius: 50px;
+    padding: 12px 12px 12px 35px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 30px;
+
+    font-size: 18px;
+    font-weight: 400;
+    color: maroon;
+
+    transition: .3s;
+}
+
+.submit-btn:hover{
+    transform: translateY(-2px);
+}
+
+.submit-arrow{
+    width: 40px;
+    height: 40px;
+
+    background:maroon;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 34px;
+}
+
+/* Fake Captcha */
+
+.captcha-box{
+    background: white;
+    border-radius: 5px;
+
+    width: 400px;
+    max-width: 100%;
+  
+    padding: 15px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact-form-box .captcha-box{
+    margin-top: 24px !important;
+}
+
+.captcha-check input{
+    width: 20px;
+    height: 20px;
+}
+
+.captcha-text{
+    color: #333;
+    font-size: 28px;
+}
+
+.captcha-logo{
+    color: #777;
+    font-size: 18px;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:991px){
+
+    .contact-section{
+        padding: 24px 0;
+    }
+
+    .contact-image-col{
+        display: none;
+    }
+
+    .contact-form-box{
+        margin-top: 0;
+        padding: 34px 28px;
+        min-height: auto;
+        height: auto;
+    }
+
+    .contact-image img{
+        height: 420px;
+    }
+
+    .contact-form-box h2{
+        font-size: 40px;
+    }
+
+    .contact-input,
+    .contact-textarea{
+        font-size: 18px;
+    }
+
+    .submit-btn{
+        font-size: 22px;
+    }
+}
+
+@media(max-width:767px){
+
+    .contact-section{
+        padding: 20px 0;
+    }
+
+    .contact-form-box{
+        padding: 26px 18px;
+        border-radius: 20px;
+    }
+
+    .contact-form-box h2{
+        font-size: 32px;
+        margin-bottom: 25px;
+    }
+
+    .contact-input,
+    .contact-textarea{
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+
+    .contact-textarea{
+        min-height: 140px;
+    }
+
+    .submit-btn{
+        width: 100%;
+        justify-content: space-between;
+        font-size: 18px;
+        padding: 10px 10px 10px 25px;
+    }
+
+    .submit-arrow{
+        width: 55px;
+        height: 55px;
+        font-size: 24px;
+    }
+
+    .captcha-box{
+        padding: 15px;
+    }
+
+    .captcha-text{
+        font-size: 18px;
+    }
+
+    .captcha-logo{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767px){
+
+    .contact-row{
+        position: relative;
+    }
+
+    .contact-image-col{
+        width: 100%;
+    }
+
+    .contact-form-col{
+        position: static;
+        transform: none;
+        width: 100%;
+        z-index: 99;
+    }
+
+    .contact-form-box{
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .contact-section{
+        padding-bottom: 20px;
+    }
+}
+@media (max-width: 767px){
+
+    .contact-image img{
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+    }
+
+}
+
+/* ==========================
+   FOOTER SECTION
+========================== */
+
+.footer-section{
+  
+ background-image:
+        linear-gradient(
+            rgba(178, 160, 119, 0.85),
+            rgba(178, 160, 119, 0.85)
+        ),
+        url("assets/image/footerbackground\ image.png");
+  
+    padding: 48px 0 0;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-section .row{
+    --bs-gutter-y: 1.5rem;
+}
+
+/* Logo */
+
+.footer-logo{
+    width: 140px;
+    margin-bottom: 16px;
+}
+
+/* About Text */
+
+.footer-text{
+    font-size: 16px;
+    font-weight:400;
+    line-height: 1.55;
+    color: rgba(255,255,255,.9);
+    margin-bottom: 14px;
+}
+
+/* Availability */
+
+.availability-title{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.availability-time{
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.availability-time span{
+    color: #F2D96B;
+    font-weight: 700;
+}
+
+/* Social Icons */
+
+.social-fixed{
+    display: flex;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.social-fixed a{
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+    background: rgba(255,255,255,.10);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #fff;
+    text-decoration: none;
+    font-size: 22px;
+
+    transition: .3s;
+}
+
+.social-fixed a:hover{
+    background: #F2D96B;
+    color: maroon;
+    transform: translateY(-5px);
+}
+
+/* Heading */
+
+.footer-links h3,
+.footer-contact h3{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+      
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-links h3 img,
+.footer-contact h3 img{
+    width: 38px;
+    height:56px;
+   
+}
+
+/* Links */
+
+.footer-links ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li{
+    margin-bottom: 12px;
+}
+
+.footer-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+     font-weight: 400;;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    
+    transition: .3s;
+}
+
+/* Hover */
+
+.footer-links ul li a:hover{
+    color: #F2D96B;
+    transform: translateX(8px);
+}
+
+/* Arrow */
+
+.link-arrow{
+    opacity: 0;
+    transition: .3s;
+}
+
+.footer-links ul li a:hover .link-arrow{
+    opacity: 1;
+}
+
+/* Contact */
+
+.contact-item{
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.contact-icon a{
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+    background: rgba(255,255,255,.10);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: rgb(241, 193, 103);
+    font-size: 16px;
+    font-weight:400;
+    flex-shrink: 0;
+}
+.contact-icon:hover a{
+    background: #F2D96B;
+    color: maroon;
+    transform: translateY(-5px);
+}
+
+.contact-item h6{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.contact-item p{
+    font-size: 16px;
+    font-weight:300;
+    color: rgba(255,255,255,.9);
+    margin: 0;
+}
+
+.contact-item p a{
+    color: rgba(255,255,255,.9);
+    text-decoration: none;
+    transition: .3s;
+}
+
+.contact-item p a:hover{
+    color: #F2D96B;
+}
+
+/* Footer Bottom */
+
+.footer-bottom{
+    margin-top: 24px;
+    padding: 18px 0;
+    border-top: 1px solid rgba(255,255,255,.15);
+
+    display: flex;
+    justify-content: center;
+}
+
+.copyright-box a{
+    background: #F2D96B;   /* same yellow color */
+    color: maroon;
+
+    padding: 14px 34px;
+
+    border-radius: 20px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    text-align: center;
+
+    min-width: 450px;
+     text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+.footer-link.active{
+    color: #F2D96B !important;
+}
+
+.footer-link.active .link-arrow{
+    opacity: 1;
+}
+
+/* ==========================
+   FOOTER RESPONSIVE
+========================== */
+
+@media (max-width:991px){
+
+    .footer-section{
+        padding-top: 40px;
+    }
+
+    .footer-links h3,
+    .footer-contact h3{
+        font-size: 24px;
+        margin-bottom: 14px;
+    }
+
+    .contact-item h6{
+        font-size: 20px;
+    }
+}
+
+@media (max-width:767px){
+
+    .footer-section{
+        padding-top: 34px;
+    }
+
+    .footer-section .row{
+        --bs-gutter-y: 1.25rem;
+    }
+
+    .footer-logo{
+        width: 120px;
+    }
+
+    .footer-text{
+        font-size: 15px;
+    }
+
+    .footer-links h3,
+    .footer-contact h3{
+        font-size: 22px;
+    }
+
+    .footer-links ul li a{
+        font-size: 16px;
+    }
+
+    .contact-item{
+        gap: 12px;
+    }
+
+    .contact-icon{
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .contact-item h6{
+        font-size: 18px;
+    }
+
+    .contact-item p{
+        font-size: 16px;
+    }
+
+    .footer-bottom{
+        margin-top: 20px;
+        padding: 14px 0;
+    }
+    .copyright-box{
+        width: 100%;
+    }
+
+
+    .copyright-box a{
+        min-width: auto;
+        width: auto;
+        max-width: calc(100vw - 28px);
+
+        padding: 14px 12px;
+
+        font-size: clamp(9px, 2.6vw, 16px);
+
+        border-radius: 15px;
+    }
+}
+@media (max-width: 767px){
+
+    body,
+    html{
+        overflow-x: hidden;
+    }
+
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+
+    .container,
+    .container-fluid,
+    .row{
+        overflow-x: hidden;
+    }
+
+    section{
+        overflow: hidden;
+    }
+}
+
+/* ==========================
+   ABOUT PAGE
+========================== */
+
+.about-body .custom-header{
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background: #e2b4b4;
+}
+
+.about-body .custom-navbar{
+    min-height: 130px;
+    padding: 18px 22px;
+    background: #ffffff;
+    border-radius: 0;
+    backdrop-filter: none;
+}
+
+.about-body .custom-navbar .container-fluid{
+    gap: 10px;
+    flex-wrap: nowrap;
+}
+
+.about-body .logo{
+    width: 135px;
+}
+
+.about-body .navbar-nav{
+    gap: 10px;
+}
+
+.about-body .nav-link{
+    color:rgb(241, 193, 103);
+    font-size: 16px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.about-body .nav-link:hover,
+.about-body .nav-link.active{
+    color: rgb(241, 193, 103);
+}
+
+.about-body .dropdown-menu{
+    border-radius: 8px;
+    box-shadow: 0 18px 40px rgba(0,0,0,.12);
+}
+
+.about-body .phone-icon{
+    margin-left: 10px;
+}
+
+.about-body .icon-circle{
+    width: 50px;
+    height: 50px;
+    border: 3px solid #e7eef0;
+    color: rgb(241, 193, 103);
+    font-size: 23px;
+}
+
+.about-body .contact-info small{
+    color: #4d5664;
+    font-size: 15px;
+}
+
+.about-body .contact-info a{
+    color: rgb(241, 193, 103);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.about-body .contact-btn{
+    background: rgb(241, 193, 103);
+    color: maroon;
+    min-height: 50px;
+    padding: 9px 9px 9px 30px;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 600;
+    gap: 10px;
+    margin-left: 8px;
+    white-space: nowrap;
+}
+
+.about-body .contact-btn span{
+    width: 56px;
+    height: 56px;
+    background: maroon;
+    color: #fff;
+    font-size: 24px;
+}
+
+.about-body .contact-btn:hover{
+    color:maroon;
+    transform: translateY(-2px);
+}
+
+
+.navbar-whatsapp{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+
+    background: transparent; /* white box hata diya */
+    box-shadow: none;        /* shadow hata diya */
+
+    margin-left: 25px;
+}
+
+.navbar-whatsapp i{
+    color: rgb(241, 193, 103);
+    font-size: 42px;
+}
+
+.navbar-whatsapp span{
+    color: rgb(241, 193, 103);
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.about-body .navbar-toggler{
+    width: 64px;
+    height: 64px;
+    border: 3px solid #e7eef0;
+    border-radius: 50%;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+    flex: 0 0 auto;
+}
+
+.about-body .navbar-toggler-icon{
+    width: 30px;
+    height: 30px;
+}
+
+@media (min-width: 1200px){
+    .about-body .navbar-collapse{
+        display: flex !important;
+        align-items: center;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 1399px) and (min-width: 1200px){
+    .about-body .custom-navbar{
+        padding: 16px 18px;
+    }
+
+    .about-body .custom-navbar .container-fluid{
+        gap: 12px;
+    }
+
+    .about-body .logo{
+        width: 118px;
+    }
+
+    .about-body .navbar-nav{
+        gap: 8px;
+    }
+
+    .about-body .nav-link{
+        font-size: 16px;
+    }
+
+    .about-body .icon-circle{
+        width: 52px;
+        height: 52px;
+        font-size: 21px;
+    }
+
+    .about-body .contact-info small{
+        font-size: 18px;
+    }
+
+    .about-body .contact-info a{
+        font-size: 20px;
+    }
+
+    .about-body .contact-btn{
+        min-height: 64px;
+        padding: 8px 8px 8px 24px;
+        font-size: 20px;
+        gap: 14px;
+    }
+
+    .about-body .contact-btn span{
+        width: 50px;
+        height: 50px;
+    }
+
+    .about-body .navbar-toggler{
+        width: 58px;
+        height: 58px;
+    }
+}
+
+.about-page-hero{
+    min-height: 280px;
+    padding: 10px 20px 18px;
+    background: #f4f2ec;
+    display: grid;
+    grid-template-columns: minmax(320px, 48%) minmax(0, 1fr);
+    align-items: stretch;
+    overflow: hidden;
+}
+
+.about-hero-copy{
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    background:
+        linear-gradient(rgba(0, 77, 67, .92), rgba(0, 77, 67, .92)),
+        url("assets/image/backgroundimage1.png") center / cover;
+    border-radius: 8px 0 0 8px;
+    padding: clamp(30px, 5vw, 62px) clamp(24px, 4vw, 52px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-hero-copy::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -15px;
+    width: 90px;
+    height: 100%;
+    background: #f2c667;
+    transform: skewX(-5deg);
+    z-index: -1;
+}
+
+.about-breadcrumb{
+    margin-bottom: 18px;
+    font-size: 18px;
+}
+
+.about-breadcrumb a,
+.about-breadcrumb .active,
+.about-breadcrumb .breadcrumb-item::before{
+    color: #fff;
+    text-decoration: none;
+}
+
+.about-hero-copy h1{
+    font-size:40px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin: 0;
+}
+
+.about-hero-media{
+    position: relative;
+    border-radius: 0 8px 8px 0;
+    overflow: hidden;
+    min-height: 360px;
+}
+
+.about-hero-media img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.about-video-btn{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 104px;
+    height: 104px;
+    border: 1px solid rgba(255,255,255,.8);
+    border-radius: 50%;
+    background: rgba(63, 58, 43, .78);
+    color: #fff;
+    font-size: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s ease;
+}
+
+.about-video-btn:hover{
+    background: rgb(241, 193, 103);
+    color: maroon;
+    transform: translate(-50%, -50%) scale(1.04);
+}
+
+.about-page-intro{
+    position: relative;
+    padding: 58px 0 36px;
+    background:
+        linear-gradient(rgba(247, 245, 237, .86), rgba(247, 245, 237, .86)),
+        url("assets/image/backgroundimage1.png") center / cover;
+}
+
+.about-page-intro .row{
+    --bs-gutter-y: 1.5rem;
+}
+
+.about-page-collage{
+    position: relative;
+    min-height: 460px;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.about-page-collage img{
+    position: absolute;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.collage-main{
+    top: 10px;
+    right: 8%;
+    width: 58%;
+    height: 270px;
+}
+
+.collage-left{
+    left: 0;
+    top: 132px;
+    width: 52%;
+    height: 270px;
+    border: 7px solid #fff;
+}
+
+.collage-bottom{
+    right: -40px;
+    bottom:0;
+    width: 55%;
+    height: 200px;
+}
+
+.about-years{
+    position: absolute;
+    left: 22%;
+    top: 230px;
+    z-index: 4;
+    background: #ffdf73;
+    color: maroon;
+    border: 6px solid #fff;
+    border-radius: 8px;
+    min-width: 180px;
+    padding: 24px 28px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 16px 32px rgba(0,0,0,.12);
+}
+
+.about-years strong{
+    font-size: 44px;
+    line-height: 1;
+    font-weight: 800;
+}
+
+.about-years span{
+    font-size: 22px;
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+.about-page-kicker{
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    color: #7f817f;
+    font-size: 25px;
+    margin-bottom: 16px;
+}
+
+.about-page-kicker i{
+    color: rgb(241, 193, 103);
+}
+
+.about-page-intro h2{
+    color: rgb(241, 193, 103);
+    font-size:35px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.about-page-intro p{
+    color: #777;
+    font-size: 18px;
+    line-height: 1.2;
+    margin-bottom: 14px;
+}
+
+.about-action-row{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-top: 22px;
+}
+
+.about-primary-btn,
+.about-secondary-btn{
+    min-height: 58px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    transition: .3s ease;
+}
+
+.about-primary-btn{
+    background: rgb(241, 193, 103);
+    color: maroon;
+    padding: 8px 10px 8px 28px;
+}
+
+.about-primary-btn span{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: maroon;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-primary-btn:hover{
+    color:maroon;
+    transform: translateY(-3px);
+}
+
+.about-secondary-btn{
+    color: rgb(241, 193, 103);
+    border: 2px solid #e3d6b5;
+    padding: 0 28px;
+}
+
+.about-secondary-btn:hover{
+    background: rgb(241, 193, 103);
+    border-color: rgb(241, 193, 103);
+    color: #fff;
+}
+
+.about-stats-section{
+    margin-top: 10px;
+    padding: 34px 0 10px; 
+}
+
+.about-stat-card{
+    color:rgb(241, 193, 103);
+    min-height: 145px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-stat-card i{
+    width: 68px;
+    height: 68px;
+    border: 3px solid #ffd86b;
+    border-radius: 50%;
+    color: #888;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    margin-bottom: 16px;
+}
+
+.about-stat-card strong{
+    font-size: 40px;
+    line-height: 1;
+    font-weight: 800;
+}
+
+.about-stat-card span{
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.about-tabs-section{
+    position: relative;
+    padding: 54px 0;
+    background:url("assets/image/gallerybackgroundimage1.png") center / cover;
+}
+
+.about-mission-vision{
+    display: grid;
+    gap: 28px;
+}
+
+.about-value-block{
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 520px);
+    align-items: center;
+    gap: 28px;
+    background: rgba(255,255,255,.86);
+    border: 1px solid rgba(255,216,107,.42);
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 20px 50px rgba(0,0,0,.08);
+}
+
+.about-value-block-reverse{
+    grid-template-columns: minmax(320px, 520px) minmax(0, 1fr);
+}
+
+.about-value-block-reverse .about-value-content{
+    order: 2;
+}
+
+.about-value-block-reverse .about-value-image{
+    order: 1;
+}
+
+.about-value-content span{
+    color: rgb(241, 193, 103);
+    font-size: 24px;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.about-value-content h3{
+    color:rgb(241, 193, 103);
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 14px;
+}
+
+.about-value-content p{
+    color: #777;
+    font-size: 16px;
+    line-height: 1.55;
+    margin-bottom: 14px;
+}
+
+.about-value-content p:last-child{
+    margin-bottom: 0;
+}
+
+.about-value-image{
+    overflow: hidden;
+    border-radius: 8px;
+    min-height: 280px;
+}
+
+.about-value-image img{
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+.about-video-modal{
+    background: #000;
+    border: 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.about-video-modal .btn-close{
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    z-index: 2;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+@media (max-width: 1199px){
+    .about-body .custom-navbar{
+        min-height: 110px;
+        padding: 12px 18px;
+    }
+
+    .about-body .logo{
+        width: 92px;
+    }
+
+    .about-body .navbar-toggler{
+        width: 58px;
+        height: 58px;
+    }
+
+    .about-body .navbar-collapse.show{
+        top: 0;
+        padding: 120px 25px 40px;
+       
+    }
+
+    .about-body .navbar-nav{
+        gap: 0;
+    }
+
+    .about-body .navbar-nav .nav-link{
+        color: #003f37 !important;
+        font-size: 20px;
+    }
+
+    .about-page-hero{
+        padding: 14px 14px 18px;
+    }
+
+    .about-page-intro p,
+    .about-value-content p{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 991px){
+    .about-page-hero{
+        grid-template-columns:1fr;
+    }
+    .about-hero-media{
+        display: none !important;
+    }
+
+    .about-page-hero{
+        display: block !important;
+        min-height: auto;
+    }
+
+    .about-hero-copy{
+        width: 100%;
+        border-radius: 12px;
+        min-height: 140px;
+    }
+
+    .about-hero-copy::after{
+        display: none;
+    }
+
+    .about-hero-media{
+        border-radius: 0 0 8px 8px;
+        min-height: 140px;
+    }
+
+    .about-page-collage{
+        min-height: 360px;
+    }
+
+    .about-page-intro{
+        padding: 34px 0 28px;
+    }
+
+    .about-page-intro .row{
+        --bs-gutter-y: 1rem;
+    }
+
+    .about-tabs-section{
+        padding: 34px 0;
+    }
+
+    .about-value-block,
+    .about-value-block-reverse{
+        grid-template-columns: 1fr;
+        gap: 26px;
+        padding: 24px;
+    }
+
+    .about-value-block-reverse .about-value-content,
+    .about-value-block-reverse .about-value-image{
+        order: initial;
+    }
+
+    .about-stats-section{
+        margin-top: 14px;
+        padding: 24px 0 0;
+    }
+
+    .about-stat-card{
+        min-height: 135px;
+    }
+
+    .about-stat-card i{
+        margin-bottom: 18px;
+    }
+}
+
+@media (max-width: 767px){
+    .about-body .custom-navbar{
+        min-height: 92px;
+        padding: 10px 12px;
+    }
+
+    .about-body .logo{
+        width: 78px;
+        
+    }
+    .about-body .navbar-toggler{
+        width: 52px;
+        height: 52px;
+    }
+
+    .about-page-hero{
+        min-height: auto;
+        display: block;
+        padding: 10px 10px 14px;
+    }
+
+    .about-hero-copy{
+        min-height: 190px;
+        padding: 24px 20px;
+        
+    }
+
+    .about-breadcrumb{
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .about-hero-media{
+        min-height: 260px;
+          display: none !important;
+    }
+
+    .about-video-btn{
+        width: 86px;
+        height: 86px;
+        font-size: 26px;
+    }
+
+    .about-page-collage{
+        min-height: auto;
+        display: grid;
+        gap: 8px;
+    }
+
+    .about-page-collage img,
+    .about-years{
+        position: static;
+        width: 100%;
+    }
+
+    .collage-main,
+    .collage-left,
+    .about-years{
+        display: none !important;
+    }
+
+    .collage-bottom{
+        display: block !important;
+        width: 100% !important;
+        height: 190px !important;
+        position: static !important;
+        
+    }
+
+
+
+
+
+    .collage-main,
+    .collage-left,
+    .collage-bottom{
+        height: 190px;
+        object-fit: cover;
+    }
+
+    .collage-left{
+        border: 0;
+    }
+
+    .about-years{
+        justify-content: center;
+        min-width: 0;
+        padding: 18px;
+    }
+
+    .about-years strong{
+        font-size: 52px;
+    }
+
+    .about-years span{
+        font-size: 18px;
+    }
+
+    .about-page-kicker{
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+
+    .about-page-intro h2{
+        font-size: 30px;
+        margin-bottom: 18px;
+    }
+
+    .about-page-intro p{
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+
+     .about-page-intro{
+        padding: 14px 0 24px !important;
+    }
+
+    .about-action-row{
+        align-items: stretch;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 20px;
+    }
+
+    .about-primary-btn,
+    .about-secondary-btn{
+        width: 100%;
+    }
+
+    .about-stats-section{
+        margin-top: 14px;
+        padding: 16px 0 0;
+    }
+
+    .about-stat-card{
+        min-height: 125px;
+    }
+
+    .about-stat-card i{
+        width: 58px;
+        height: 58px;
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+
+    .about-stat-card strong{
+        font-size: 34px;
+    }
+
+    .about-stat-card span{
+        font-size: 18px;
+    }
+
+    .about-tabs-section{
+        padding: 28px 0;
+    }
+
+    .about-mission-vision{
+        gap: 18px;
+    }
+
+    .about-value-block,
+    .about-value-block-reverse{
+        gap: 16px;
+        padding: 14px;
+    }
+
+    .about-value-content{
+        text-align: left;
+    }
+
+    .about-value-content span{
+        font-size: 20px;
+    }
+
+    .about-value-content h3{
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .about-value-content p{
+        font-size: 17px;
+    }
+
+    .about-value-image,
+    .about-value-image img{
+        min-height: 190px;
+    }
+    
+
+}
+
+/* ==========================
+   ALCOHOL TREATMENT PAGE CSS START
+========================== */
+
+/* ===== Alcohol Page Base CSS Start ===== */
+.alcohol-body{
+    background: #f6f4ee;
+    color: rgb(241, 193, 103);
+}
+
+.alcohol-body .custom-header{
+    background: #ffffff;
+}
+/* ===== Alcohol Page Base CSS End ===== */
+
+/* ===== Navbar Ke Baad Hero Carousel CSS Start ===== */
+.alcohol-hero-section{
+    padding: 0 10px 10px;
+    background: #ffffff;
+}
+
+.alcohol-hero-section .carousel{
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    height: auto !important;
+}
+
+.alcohol-hero-section .carousel-inner,
+.alcohol-hero-section .carousel-item{
+    height: auto !important;
+}
+
+.alcohol-hero-slide{
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    background: #e8f1e6;
+}
+
+.alcohol-hero-slide img{
+    width: 100%;
+    height: auto !important;
+    object-fit: contain;
+    display: block;
+}
+
+.alcohol-hero-social{
+    position: absolute;
+    top: 18%;
+    right: 42px;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.alcohol-hero-social a{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,.55);
+    background: rgb(246, 231, 203);
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 18px;
+    transition: .3s ease;
+}
+
+.alcohol-hero-social a:hover{
+    background: #ffe071;
+    color: maroon;
+    transform: translateX(-4px);
+}
+
+.alcohol-hero-social span{
+    margin-top: 12px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    white-space: nowrap;
+    text-shadow: 0 2px 8px rgba(0,0,0,.35);
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+.alcohol-carousel-arrow{
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: rgb(241, 193, 103);
+    opacity: 1;
+    transform: none;
+    z-index: 5;
+}
+
+.alcohol-carousel-arrow i{
+    color: #ffffff;
+    font-size: 28px;
+}
+
+.alcohol-hero-section .carousel-control-prev{
+    top: auto;
+    left: 28px;
+    right: auto;
+    bottom: 28px;
+}
+
+.alcohol-hero-section .carousel-control-next{
+    top: auto;
+    left: 104px;
+    right: auto;
+    bottom: 28px;
+}
+
+.alcohol-hero-section .carousel-control-prev,
+.alcohol-hero-section .carousel-control-next{
+    display: inline-flex;
+}
+
+.alcohol-hero-section .carousel-control-prev:hover,
+.alcohol-hero-section .carousel-control-next:hover{
+    background: #ffe071;
+}
+
+.alcohol-hero-section .carousel-control-prev:hover i,
+.alcohol-hero-section .carousel-control-next:hover i{
+    color: #004d43;
+}
+/* ===== Navbar Ke Baad Hero Carousel CSS End ===== */
+
+/* ===== Floating WhatsApp And Call Button CSS Start ===== */
+.alcohol-floating-actions{
+    position: fixed;
+    left: 14px;
+    bottom: 56px;
+    z-index: 9999;
+    display: grid;
+    gap: 8px;
+    max-width: calc(100vw - 28px);
+}
+
+.alcohol-floating-actions a{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-weight: 800;
+    box-shadow: 0 12px 28px rgba(0,0,0,.18);
+    box-sizing: border-box;
+}
+
+.alcohol-whatsapp{
+    background: #ffffff;
+    color: #3b6b4d;
+    border-radius: 8px;
+    padding: 8px 14px 8px 8px;
+    font-size: 28px;
+}
+
+.alcohol-whatsapp i{
+    color: #10c95b;
+}
+
+.alcohol-call{
+    background: #ec1515;
+    color: #ffffff;
+    min-width: 178px;
+    border-radius: 8px;
+    padding: 7px 14px 7px 8px;
+    font-size: 15px;
+    line-height: 1.05;
+    text-transform: uppercase;
+}
+
+.alcohol-call i{
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+}
+/* ===== Floating WhatsApp And Call Button CSS End ===== */
+
+/* ===== What To Expect Section CSS Start ===== */
+.alcohol-expect-section{
+    padding: 84px 0 96px;
+    background: #ffffff;
+}
+
+.alcohol-expect-section .row{
+    align-items: flex-start !important;
+}
+
+.alcohol-image-collage{
+    position: relative;
+    min-height: 560px;
+    margin-top: 0;
+}
+
+.alcohol-image-collage img{
+    position: absolute;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.alcohol-collage-one{
+    left: -40px;
+    top: 40px;
+    width: 48%;
+    height: 220px;
+    object-position: center;
+}
+
+.alcohol-collage-two{
+    right: -20px;
+    top: -10px;
+    width: 62%;
+    height: 330px;
+    object-position: left top;
+}
+
+.alcohol-collage-three{
+    left: 6%;
+    bottom: -10px;
+    width: 86%;
+    height: 360px;
+    border: 7px solid #ffffff;
+    object-position: center;
+}
+
+.alcohol-section-label{
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    color: #7a817e;
+    font-size: 28px;
+    margin-bottom: 0px;
+}
+
+.alcohol-section-label img{
+    width: 70px;
+    height: auto;
+    object-fit: contain;
+}
+
+.alcohol-expect-section h2,
+.alcohol-location-section h2{
+    color:rgb(241, 193, 103);
+    font-size:40px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.alcohol-expect-section p{
+    color: #777;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.55;
+}
+
+.alcohol-primary-btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    min-height: 40px;
+    margin-top: 18px;
+    padding: 10px 12px 10px 34px;
+    border-radius: 999px;
+    background: #ffe071;
+    color: maroon;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.alcohol-primary-btn span{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: maroon;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+/* ===== What To Expect Section CSS End ===== */
+
+/* ===== Dark About Treatment Section CSS Start ===== */
+.alcohol-dark-info-section{
+    position: relative;
+    padding: 90px 0 80px;
+    background: url(assets/image/backgroundimage1.png)center center no-repeat;
+     background-size: cover;   
+}
+
+
+.alcohol-section-label.light{
+    color: #ffe071;
+    font-size: 30px;
+    font-weight: 600;
+    
+    
+}
+.alcohol-dark-info-section a{
+    text-decoration: none;
+}
+
+
+.alcohol-dark-info-section h2{
+    max-width: 900px;
+    color: #ffffff;
+    font-size: 42px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.alcohol-dark-info-section p{
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 28px;
+}
+/* ===== Dark About Treatment Section CSS End ===== */
+
+/* ===== Contact Form Section CSS Start ===== */
+.alcohol-contact-section{
+    position: relative;
+    padding: 70px 0;
+    min-height: 560px;
+    overflow: hidden;
+}
+
+.alcohol-contact-bg{
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(0,77,67,.24), rgba(0,77,67,.1)),
+        url("assets/image/backgroundimage3.png") center / cover;
+}
+
+.alcohol-form-card{
+    position: relative;
+    z-index: 2;
+   background:
+        linear-gradient(rgba(64, 129, 120, 0.96), rgba(0,77,67,.96)),
+        url("assets/image/backgroundimage7.png") center / cover;
+    border: 3px solid rgba(255,255,255,.82);
+    border-radius: 12px;
+    padding: clamp(28px, 4vw, 64px);
+    color: #ffffff;
+}
+
+.alcohol-form-card h2{
+    font-size:30px;
+    font-weight: 800;
+    margin-bottom: 34px;
+}
+
+.alcohol-form-card form{
+    display: grid;
+    gap: 20px;
+}
+
+.alcohol-form-card input,
+.alcohol-form-card textarea{
+    width: 100%;
+    border: 3px solid rgba(255,255,255,.24);
+    border-radius: 12px;
+    background: rgba(255,255,255,.08);
+    color: #ffffff;
+    padding: 15px 20px;
+    font-size: 16px;
+    outline: none;
+}
+
+.alcohol-form-card input::placeholder,
+.alcohol-form-card textarea::placeholder{
+    color: #ffffff;
+}
+
+.alcohol-form-card textarea{
+    min-height: 140px;
+    resize: vertical;
+}
+
+.alcohol-form-card button{
+    width: max-content;
+    border: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px 10px 36px;
+    min-height: 60px;
+    border-radius: 999px;
+    background: #ffe071;
+    color: maroon;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.alcohol-form-card button span{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background:maroon;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+/* ===== Contact Form Section CSS End ===== */
+
+/* ===== Location Section CSS Start ===== */
+.alcohol-location-section{
+    padding: 40px 0 80px;
+    background:
+        linear-gradient(rgba(246,244,238,.96), rgba(246,244,238,.96)),
+        url("assets/image/backgroundimage9.png") center / cover;
+}
+
+.alcohol-location-copy h3{
+    color: rgb(241, 193, 103);
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.alcohol-location-copy p{
+    color: #80827e;
+    font-size: 20px;
+    line-height: 1.2;
+
+}
+
+.alcohol-map-box{
+    min-height: 320px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 18px 44px rgba(0,0,0,.12);
+}
+
+.alcohol-map-box iframe{
+    width: 100%;
+    height: 420px;
+    border: 0;
+    display: block;
+}
+/* ===== Location Section CSS End ===== */
+
+/* ===== Footer Section CSS Start ===== */
+/* Alcohol page footer uses the same .footer-section CSS as the home page. */
+/* ===== Footer Section CSS End ===== */
+
+/* ===== Alcohol Treatment Page Responsive CSS Start ===== */
+@media (max-width: 1199px){
+    .alcohol-image-collage{
+        max-width: 720px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 767px){
+    .alcohol-hero-section{
+        padding: 0 10px 18px;
+    }
+
+    .alcohol-carousel-arrow{
+        width: 34px;
+        height: 34px;
+    }
+
+    .alcohol-carousel-arrow i{
+        font-size: 16px;
+    }
+
+    .alcohol-hero-section .carousel-control-prev{
+        left: 10px;
+        right: auto;
+        bottom: 10px;
+    }
+
+    .alcohol-hero-section .carousel-control-next{
+        left: 50px;
+        right: auto;
+        bottom: 10px;
+    }
+
+    .alcohol-hero-social{
+        top: 8px;
+        right: 8px;
+        gap: 4px;
+    }
+
+    .alcohol-hero-social a{
+        width: 26px;
+        height: 26px;
+        border-width: 1px;
+        font-size: 12px;
+    }
+
+    .alcohol-hero-social span{
+        display: none;
+    }
+
+    .alcohol-expect-section,
+    .alcohol-location-section{
+        padding: 58px 0;
+    }
+
+    .alcohol-image-collage{
+        min-height: auto;
+        display: grid;
+        gap: 14px;
+        margin-top: 0;
+    }
+
+    .alcohol-image-collage img{
+        position: static;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+     .alcohol-collage-one,
+    .alcohol-collage-two{
+        display: none !important;
+    }
+
+    .alcohol-collage-three{
+        display: block !important;
+        width: 100%;
+        height: auto;
+    }
+
+
+    .alcohol-collage-three{
+        border: 0;
+    }
+
+    .alcohol-section-label{
+        font-size: 20px;
+        gap: 10px;
+        margin-bottom: 18px;
+    }
+
+    .alcohol-section-label img{
+        width:34px;
+        height: 34px;
+    }
+
+    .alcohol-expect-section h2,
+    .alcohol-dark-info-section h2,
+    .alcohol-location-section h2{
+        font-size: 36px;
+    }
+
+    .alcohol-expect-section p,
+    .alcohol-dark-info-section p,
+    .alcohol-location-copy p{
+        font-size: 18px;
+    }
+
+    .alcohol-primary-btn,
+    .alcohol-form-card button{
+        width: 100%;
+        justify-content: center;
+        padding-left: 16px;
+        font-size: 18px;
+    }
+
+    .alcohol-dark-info-section{
+        padding: 80px 0 95px;
+    }
+
+    .alcohol-contact-section{
+        padding: 44px 0;
+        min-height: auto;
+    }
+
+    .alcohol-form-card input,
+    .alcohol-form-card textarea{
+        font-size: 18px;
+        padding: 18px 20px;
+    }
+
+}
+/* ===== Alcohol Treatment Page Responsive CSS End ===== */
+
+/* ==========================
+   ALCOHOL TREATMENT PAGE CSS END
+========================== */
+
+
+
+/* ==========================
+   Drug rehabilitaion PAGE CSS START
+========================== */
+
+/* ===== drug Page Base CSS Start ===== */
+.drug-body{
+    background: #f6f4ee;
+    color: rgb(241, 193, 103);
+}
+
+.drug-body .custom-header{
+    background: #ffffff;
+}
+/* ===== drug Page Base CSS End ===== */
+
+/* ===== Navbar Ke Baad Hero Carousel CSS Start ===== */
+.drug-hero-section{
+    padding: 0 10px 10px;
+    background: #ffffff;
+}
+
+.drug-hero-section .carousel{
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    height: auto !important;
+}
+
+.drug-hero-section .carousel-inner,
+.drug-hero-section .carousel-item{
+    height: auto !important;
+}
+
+.drug-hero-slide{
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    background: #e8f1e6;
+}
+
+.drug-hero-slide img{
+    width: 100%;
+    height: auto !important;
+    object-fit: contain;
+    display: block;
+}
+
+.drug-hero-social{
+    position: absolute;
+    top: 18%;
+    right: 42px;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.drug-hero-social a{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,.55);
+    background: rgb(246, 231, 203);
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 18px;
+    transition: .3s ease;
+}
+
+.drug-hero-social a:hover{
+    background: #ffe071;
+    color: maroon;
+    transform: translateX(-4px);
+}
+
+.drug-hero-social span{
+    margin-top: 12px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+    text-shadow: 0 2px 8px rgba(0,0,0,.35);
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+.drug-carousel-arrow{
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: rgb(241, 193, 103);
+    opacity: 1;
+    transform: none;
+    z-index: 5;
+}
+
+.drug-carousel-arrow i{
+    color: #ffffff;
+    font-size: 28px;
+}
+
+.drug-hero-section .carousel-control-prev{
+    top: auto;
+    left: 28px;
+    right: auto;
+    bottom: 28px;
+}
+
+.drug-hero-section .carousel-control-next{
+    top: auto;
+    left: 104px;
+    right: auto;
+    bottom: 28px;
+}
+
+.drug-hero-section .carousel-control-prev,
+.drug-hero-section .carousel-control-next{
+    display: inline-flex;
+}
+
+.drug-hero-section .carousel-control-prev:hover,
+.drug-hero-section .carousel-control-next:hover{
+    background: #ffe071;
+}
+
+.drug-hero-section .carousel-control-prev:hover i,
+.drug-hero-section .carousel-control-next:hover i{
+    color: maroon;
+}
+/* ===== Navbar Ke Baad Hero Carousel CSS End ===== */
+
+/* ===== Floating WhatsApp And Call Button CSS Start ===== */
+.drug-floating-actions{
+    position: fixed;
+    left: 14px;
+    bottom: 56px;
+    z-index: 9999;
+    display: grid;
+    gap: 8px;
+    max-width: calc(100vw - 28px);
+}
+
+.drug-floating-actions a{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-weight: 800;
+    box-shadow: 0 12px 28px rgba(0,0,0,.18);
+    box-sizing: border-box;
+}
+
+.drug-whatsapp{
+    background: #ffffff;
+    color: #3b6b4d;
+    border-radius: 8px;
+    padding: 6px 10px 6px 6px;
+    font-size: 25px;
+}
+
+.drug-whatsapp i{
+    color: #10c95b;
+}
+
+.drug-call{
+    background: #ec1515;
+    color: #ffffff;
+    min-width: 178px;
+    border-radius: 8px;
+    padding: 7px 14px 7px 8px;
+    font-size: 15px;
+    line-height: 1.05;
+    text-transform: uppercase;
+}
+
+.drug-call i{
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+}
+/* ===== Floating WhatsApp And Call Button CSS End ===== */
+
+/* ===== What To Expect Section CSS Start ===== */
+.drug-expect-section{
+    padding: 84px 0 96px;
+    background: #ffffff;
+}
+
+.drug-expect-section .row{
+    align-items: flex-start !important;
+}
+
+.drug-image-collage{
+    position: relative;
+    min-height: 560px;
+    margin-top: 0;
+}
+
+.drug-image-collage img{
+    position: absolute;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.drug-collage-one{
+    left: -40px;
+    top: 40px;
+    width: 48%;
+    height: 220px;
+    object-position: center;
+}
+
+.drug-collage-two{
+    right: -20px;
+    top: -10px;
+    width: 62%;
+    height: 330px;
+    object-position: left top;
+}
+
+.drug-collage-three{
+    left: 6%;
+    bottom: -10px;
+    width: 86%;
+    height: 360px;
+    border: 7px solid #ffffff;
+    object-position: center;
+}
+
+.drug-section-label{
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    color: #7a817e;
+    font-size: 28px;
+    margin-bottom: 0px;
+}
+
+.drug-section-label img{
+    width: 70px;
+    height: auto;
+    object-fit: contain;
+}
+
+.drug-expect-section h2,
+.drug-location-section h2{
+    color:rgb(241, 193, 103);
+    font-size:40px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.drug-expect-section p{
+    color: #777;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.55;
+    
+}
+.drug-expect-section a{
+    text-decoration:none;
+}
+
+.drug-primary-btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    min-height: 40px;
+    margin-top: 18px;
+    padding: 10px 12px 10px 34px;
+    border-radius: 999px;
+    background: #ffe071;
+    color: maroon;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.drug-primary-btn span{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: maroon;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+/* ===== What To Expect Section CSS End ===== */
+
+/* ===== Dark About Treatment Section CSS Start ===== */
+.drug-dark-info-section{
+    position: relative;
+    padding: 90px 0 80px;
+    background: url(assets/image/backgroundimage1.png)center center no-repeat;
+     background-size: cover;   
+}
+
+
+.drug-section-label.light{
+    color: #ffe071;
+    font-size: 30px;
+    font-weight: 600;
+    
+    
+}
+.drug-dark-info-section a{
+    text-decoration: none;
+}
+
+
+.drug-dark-info-section h2{
+    max-width: 900px;
+    color: #ffffff;
+    font-size: 42px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.drug-dark-info-section p{
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 28px;
+}
+/* ===== Dark About Treatment Section CSS End ===== */
+
+/* ===== Contact Form Section CSS Start ===== */
+.drug-contact-section{
+    position: relative;
+    padding: 70px 0;
+    min-height: 560px;
+    overflow: hidden;
+}
+
+.drug-contact-bg{
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(0,77,67,.24), rgba(0,77,67,.1)),
+        url("assets/image/backgroundimage3.png") center / cover;
+}
+
+.drug-form-card{
+    position: relative;
+    z-index: 2;
+   background:
+        linear-gradient(rgba(64, 129, 120, 0.96), rgba(0,77,67,.96)),
+        url("assets/image/backgroundimage7.png") center / cover;
+    border: 3px solid rgba(255,255,255,.82);
+    border-radius: 12px;
+    padding: clamp(28px, 4vw, 64px);
+    color: #ffffff;
+}
+
+.drug-form-card h2{
+    font-size:30px;
+    font-weight: 800;
+    margin-bottom: 34px;
+}
+
+.drug-form-card form{
+    display: grid;
+    gap: 20px;
+}
+
+.drug-form-card input,
+.drug-form-card textarea{
+    width: 100%;
+    border: 3px solid rgba(255,255,255,.24);
+    border-radius: 12px;
+    background: rgba(255,255,255,.08);
+    color: #ffffff;
+    padding: 15px 20px;
+    font-size: 16px;
+    outline: none;
+}
+
+.drug-form-card input::placeholder,
+.drug-form-card textarea::placeholder{
+    color: #ffffff;
+}
+
+.drug-form-card textarea{
+    min-height: 140px;
+    resize: vertical;
+}
+
+.drug-form-card button{
+    width: max-content;
+    border: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px 10px 36px;
+    min-height: 60px;
+    border-radius: 999px;
+    background: #ffe071;
+    color: maroon;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.drug-form-card button span{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background:maroon;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+/* ===== Contact Form Section CSS End ===== */
+
+/* ===== Location Section CSS Start ===== */
+.drug-location-section{
+    padding: 40px 0 80px;
+    background:
+        linear-gradient(rgba(246,244,238,.96), rgba(246,244,238,.96)),
+        url("assets/image/backgroundimage9.png") center / cover;
+}
+
+.drug-location-copy h3{
+    color: rgb(241, 193, 103);
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.drug-location-copy p{
+    color: #80827e;
+    font-size: 20px;
+    line-height: 1.2;
+
+}
+
+.drug-map-box{
+    min-height: 320px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 18px 44px rgba(0,0,0,.12);
+}
+
+.drug-map-box iframe{
+    width: 100%;
+    height: 420px;
+    border: 0;
+    display: block;
+}
+/* ===== Location Section CSS End ===== */
+
+/* ===== Footer Section CSS Start ===== */
+/* Alcohol page footer uses the same .footer-section CSS as the home page. */
+/* ===== Footer Section CSS End ===== */
+
+/* ===== Alcohol Treatment Page Responsive CSS Start ===== */
+@media (max-width: 1199px){
+    .drug-image-collage{
+        max-width: 720px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 767px){
+    .drug-hero-section{
+        padding: 0 10px 18px;
+    }
+
+    .drug-carousel-arrow{
+        width: 34px;
+        height: 34px;
+    }
+
+    .drug-carousel-arrow i{
+        font-size: 16px;
+    }
+
+    .drug-hero-section .carousel-control-prev{
+        left: 10px;
+        right: auto;
+        bottom: 10px;
+    }
+
+    .drug-hero-section .carousel-control-next{
+        left: 50px;
+        right: auto;
+        bottom: 10px;
+    }
+
+    .drug-hero-social{
+        top: 8px;
+        right: 8px;
+        gap: 4px;
+    }
+
+    .drug-hero-social a{
+        width: 26px;
+        height: 26px;
+        border-width: 1px;
+        font-size: 12px;
+    }
+
+    .drug-hero-social span{
+        display: none;
+    }
+
+    .drug-expect-section,
+    .drug-location-section{
+        padding: 58px 0;
+    }
+
+    .drug-image-collage{
+        min-height: auto;
+        display: grid;
+        gap: 14px;
+        margin-top: 0;
+    }
+
+    .drug-image-collage img{
+        position: static;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+     .drug-collage-one,
+    .drug-collage-two{
+        display: none !important;
+    }
+
+    .drug-collage-three{
+        display: block !important;
+        width: 100%;
+        height: auto;
+    }
+
+
+    .drug-collage-three{
+        border: 0;
+    }
+
+    .drug-section-label{
+        font-size: 20px;
+        gap: 10px;
+        margin-bottom: 18px;
+    }
+
+    .drug-section-label img{
+        width:34px;
+        height: 34px;
+    }
+
+    .drug-expect-section h2,
+    .drug-dark-info-section h2,
+    .drug-location-section h2{
+        font-size: 36px;
+    }
+
+    .drug-expect-section p,
+    .drug-dark-info-section p,
+    .drug-location-copy p{
+        font-size: 18px;
+    }
+
+    .drug-primary-btn,
+    .drug-form-card button{
+        width: 100%;
+        justify-content: center;
+        padding-left: 16px;
+        font-size: 18px;
+    }
+
+    .drug-dark-info-section{
+        padding: 80px 0 95px;
+    }
+
+    .drug-contact-section{
+        padding: 44px 0;
+        min-height: auto;
+    }
+
+    .drug-form-card input,
+    .drug-form-card textarea{
+        font-size: 18px;
+        padding: 18px 20px;
+    }
+
+}
+/* ===== drug rehabilitation Page Responsive CSS End ===== */
+
+/* ==========================
+   drug rehabilitation PAGE CSS END
+========================== */
+
+
+/* ==========================
+   Detox addicition PAGE CSS START
+========================== */
+
+/* ===== drug Page Base CSS Start ===== */
+.detox-body{
+    background: #f6f4ee;
+    color: rgb(241, 193, 103);
+}
+
+.detox-body .custom-header{
+    background: #ffffff;
+}
+/* ===== detox Page Base CSS End ===== */
+
+/* ===== Navbar Ke Baad Hero Carousel CSS Start ===== */
+.detox-hero-section{
+    padding: 0 10px 10px;
+    background: #ffffff;
+}
+
+.detox-hero-section .carousel{
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    height: auto !important;
+}
+
+.detox-hero-section .carousel-inner,
+.detox-hero-section .carousel-item{
+    height: auto !important;
+}
+
+.detox-hero-slide{
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    background: #e8f1e6;
+}
+
+.detox-hero-slide img{
+    width: 100%;
+    height: auto !important;
+    object-fit: contain;
+    display: block;
+}
+
+.detox-hero-social{
+    position: absolute;
+    top: 18%;
+    right: 42px;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.detox-hero-social a{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,.55);
+    background: rgb(246, 231, 203);
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 18px;
+    transition: .3s ease;
+}
+
+.detox-hero-social a:hover{
+    background: #ffe071;
+    color: maroon;
+    transform: translateX(-4px);
+}
+
+.detox-hero-social span{
+    margin-top: 12px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+    text-shadow: 0 2px 8px rgba(0,0,0,.35);
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+.detox-carousel-arrow{
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: rgb(241, 193, 103);
+    opacity: 1;
+    transform: none;
+    z-index: 5;
+}
+
+.detox-carousel-arrow i{
+    color: #ffffff;
+    font-size: 28px;
+}
+
+.detox-hero-section .carousel-control-prev{
+    top: auto;
+    left: 28px;
+    right: auto;
+    bottom: 28px;
+}
+
+.detox-hero-section .carousel-control-next{
+    top: auto;
+    left: 104px;
+    right: auto;
+    bottom: 28px;
+}
+
+.detox-hero-section .carousel-control-prev,
+.detox-hero-section .carousel-control-next{
+    display: inline-flex;
+}
+
+.detox-hero-section .carousel-control-prev:hover,
+.detox-hero-section .carousel-control-next:hover{
+    background: #ffe071;
+}
+
+.detox-hero-section .carousel-control-prev:hover i,
+.detox-hero-section .carousel-control-next:hover i{
+    color: maroon;
+}
+/* ===== Navbar Ke Baad Hero Carousel CSS End ===== */
+
+/* ===== Floating WhatsApp And Call Button CSS Start ===== */
+.detox-floating-actions{
+    position: fixed;
+    left: 14px;
+    bottom: 56px;
+    z-index: 9999;
+    display: grid;
+    gap: 8px;
+    max-width: calc(100vw - 28px);
+}
+
+.detox-floating-actions a{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-weight: 800;
+    box-shadow: 0 12px 28px rgba(0,0,0,.18);
+    box-sizing: border-box;
+}
+
+.detox-whatsapp{
+    background: #ffffff;
+    color: #3b6b4d;
+    border-radius: 8px;
+    padding: 6px 10px 6px 6px;
+    font-size: 25px;
+}
+
+.detox-whatsapp i{
+    color: #10c95b;
+}
+
+.detox-call{
+    background: #ec1515;
+    color: #ffffff;
+    min-width: 178px;
+    border-radius: 8px;
+    padding: 7px 14px 7px 8px;
+    font-size: 15px;
+    line-height: 1.05;
+    text-transform: uppercase;
+}
+
+.detox-call i{
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+}
+/* ===== Floating WhatsApp And Call Button CSS End ===== */
+
+/* ===== What To Expect Section CSS Start ===== */
+.detox-expect-section{
+    padding: 84px 0 96px;
+    background: #ffffff;
+}
+
+.detox-expect-section .row{
+    align-items: flex-start !important;
+}
+
+.detox-image-collage{
+    position: relative;
+    min-height: 560px;
+    margin-top: 0;
+}
+
+.detox-image-collage img{
+    position: absolute;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.detox-collage-one{
+    left: -40px;
+    top: 40px;
+    width: 48%;
+    height: 220px;
+    object-position: center;
+}
+
+.detox-collage-two{
+    right: -20px;
+    top: -10px;
+    width: 62%;
+    height: 330px;
+    object-position: left top;
+}
+
+.detox-collage-three{
+    left: 6%;
+    bottom: -10px;
+    width: 86%;
+    height: 360px;
+    border: 7px solid #ffffff;
+    object-position: center;
+}
+
+.detox-section-label{
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    color: #7a817e;
+    font-size: 28px;
+    margin-bottom: 0px;
+}
+
+.detox-section-label img{
+    width: 70px;
+    height: auto;
+    object-fit: contain;
+}
+
+.detox-expect-section h2,
+.detox-location-section h2{
+    color:rgb(241, 193, 103);
+    font-size:40px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.detox-expect-section p{
+    color: #777;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.55;
+    
+}
+.detox-expect-section a{
+    text-decoration:none;
+}
+
+.detox-primary-btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    min-height: 40px;
+    margin-top: 18px;
+    padding: 10px 12px 10px 34px;
+    border-radius: 999px;
+    background: #ffe071;
+    color: maroon;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.detox-primary-btn span{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: maroon;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+/* ===== What To Expect Section CSS End ===== */
+
+/* ===== Dark About Treatment Section CSS Start ===== */
+.detox-dark-info-section{
+    position: relative;
+    padding: 90px 0 80px;
+    background: url(assets/image/backgroundimage1.png)center center no-repeat;
+     background-size: cover;   
+}
+
+
+.detox-section-label.light{
+    color: #ffe071;
+    font-size: 30px;
+    font-weight: 600;
+    
+    
+}
+.detox-dark-info-section a{
+    text-decoration: none;
+}
+
+
+.detox-dark-info-section h2{
+    max-width: 900px;
+    color: #ffffff;
+    font-size: 42px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.detox-dark-info-section p{
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 28px;
+}
+/* ===== Dark About Treatment Section CSS End ===== */
+
+/* ===== Contact Form Section CSS Start ===== */
+.detox-contact-section{
+    position: relative;
+    padding: 70px 0;
+    min-height: 560px;
+    overflow: hidden;
+}
+
+.detox-contact-bg{
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(0,77,67,.24), rgba(0,77,67,.1)),
+        url("assets/image/backgroundimage3.png") center / cover;
+}
+
+.detox-form-card{
+    position: relative;
+    z-index: 2;
+   background:
+        linear-gradient(rgba(64, 129, 120, 0.96), rgba(0,77,67,.96)),
+        url("assets/image/backgroundimage7.png") center / cover;
+    border: 3px solid rgba(255,255,255,.82);
+    border-radius: 12px;
+    padding: clamp(28px, 4vw, 64px);
+    color: #ffffff;
+}
+
+.detox-form-card h2{
+    font-size:30px;
+    font-weight: 800;
+    margin-bottom: 34px;
+}
+
+.detox-form-card form{
+    display: grid;
+    gap: 20px;
+}
+
+.detox-form-card input,
+.detox-form-card textarea{
+    width: 100%;
+    border: 3px solid rgba(255,255,255,.24);
+    border-radius: 12px;
+    background: rgba(255,255,255,.08);
+    color: #ffffff;
+    padding: 15px 20px;
+    font-size: 16px;
+    outline: none;
+}
+
+.detox-form-card input::placeholder,
+.detox-form-card textarea::placeholder{
+    color: #ffffff;
+}
+
+.detox-form-card textarea{
+    min-height: 140px;
+    resize: vertical;
+}
+
+.detox-form-card button{
+    width: max-content;
+    border: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px 10px 36px;
+    min-height: 60px;
+    border-radius: 999px;
+    background: #ffe071;
+    color: maroon;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.detox-form-card button span{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background:maroon;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+/* ===== Contact Form Section CSS End ===== */
+
+/* ===== Location Section CSS Start ===== */
+.detox-location-section{
+    padding: 40px 0 80px;
+    background:
+        linear-gradient(rgba(246,244,238,.96), rgba(246,244,238,.96)),
+        url("assets/image/backgroundimage9.png") center / cover;
+}
+
+.detox-location-copy h3{
+    color: rgb(241, 193, 103);
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.detox-location-copy p{
+    color: #80827e;
+    font-size: 20px;
+    line-height: 1.2;
+
+}
+
+.detox-map-box{
+    min-height: 320px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 18px 44px rgba(0,0,0,.12);
+}
+
+.detox-map-box iframe{
+    width: 100%;
+    height: 420px;
+    border: 0;
+    display: block;
+}
+/* ===== Location Section CSS End ===== */
+
+/* ===== Footer Section CSS Start ===== */
+/* Alcohol page footer uses the same .footer-section CSS as the home page. */
+/* ===== Footer Section CSS End ===== */
+
+/* ===== Alcohol Treatment Page Responsive CSS Start ===== */
+@media (max-width: 1199px){
+    .detox-image-collage{
+        max-width: 720px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 767px){
+    .detox-hero-section{
+        padding: 0 10px 18px;
+    }
+
+    .detox-carousel-arrow{
+        width: 34px;
+        height: 34px;
+    }
+
+    .detox-carousel-arrow i{
+        font-size: 16px;
+    }
+
+    .detox-hero-section .carousel-control-prev{
+        left: 10px;
+        right: auto;
+        bottom: 10px;
+    }
+
+    .detox-hero-section .carousel-control-next{
+        left: 50px;
+        right: auto;
+        bottom: 10px;
+    }
+
+    .detox-hero-social{
+        top: 8px;
+        right: 8px;
+        gap: 4px;
+    }
+
+    .detox-hero-social a{
+        width: 26px;
+        height: 26px;
+        border-width: 1px;
+        font-size: 12px;
+    }
+
+    .detox-hero-social span{
+        display: none;
+    }
+
+    .detox-expect-section,
+    .detox-location-section{
+        padding: 20px 0;
+    }
+
+    .detox-image-collage{
+        min-height: auto;
+        display: grid;
+        gap: 14px;
+        margin-top: 0;
+    }
+
+    .detox-image-collage img{
+        position: static;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+     .detox-collage-one,
+    .detox-collage-two{
+        display: none !important;
+    }
+
+    .detox-collage-three{
+        display: block !important;
+        width: 100%;
+        height: auto;
+    }
+
+
+    .detox-collage-three{
+        border: 0;
+    }
+
+    .detox-section-label{
+        font-size: 20px;
+        gap: 10px;
+        margin-bottom: 18px;
+    }
+
+    .detox-section-label img{
+        width:34px;
+        height: 34px;
+    }
+
+    .detox-expect-section h2,
+    .detox-dark-info-section h2,
+    .detox-location-section h2{
+        font-size: 36px;
+    }
+
+    .detox-expect-section p,
+    .detox-dark-info-section p,
+    .detox-location-copy p{
+        font-size: 18px;
+    }
+
+    .detox-primary-btn,
+    .detox-form-card button{
+        width: 100%;
+        justify-content: center;
+        padding-left: 16px;
+        font-size: 18px;
+    }
+
+    .detox-dark-info-section{
+        padding: 80px 0 95px;
+    }
+
+    .detox-contact-section{
+        padding: 44px 0;
+        min-height: auto;
+    }
+
+    .detox-form-card input,
+    .detox-form-card textarea{
+        font-size: 18px;
+        padding: 18px 20px;
+    }
+
+}
+/* ===== detox addiciton Page Responsive CSS End ===== */
+
+/* ==========================
+   detox addiction PAGE CSS END
+========================== */
+
+
+
+
+/* ==========================
+   anxiety addicition PAGE CSS START
+========================== */
+
+/* ===== drug Page Base CSS Start ===== */
+.anxiety-body{
+    background: #f6f4ee;
+    color: rgb(241, 193, 103);
+}
+
+.anxiety-body .custom-header{
+    background: #ffffff;
+}
+/* ===== detox Page Base CSS End ===== */
+
+/* ===== Navbar Ke Baad Hero Carousel CSS Start ===== */
+.anxiety-hero-section{
+    padding: 0 10px 10px;
+    background: #ffffff;
+}
+
+.anxiety-hero-section .carousel{
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    height: auto !important;
+}
+
+.anxiety-hero-section .carousel-inner,
+.anxiety-hero-section .carousel-item{
+    height: auto !important;
+}
+
+.anxiety-hero-slide{
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    background: #e8f1e6;
+}
+
+.anxiety-hero-slide img{
+    width: 100%;
+    height: auto !important;
+    object-fit: contain;
+    display: block;
+}
+
+.anxiety-hero-social{
+    position: absolute;
+    top: 18%;
+    right: 42px;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.anxiety-hero-social a{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,.55);
+    background: rgb(246, 231, 203);
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 18px;
+    transition: .3s ease;
+}
+
+.anxiety-hero-social a:hover{
+    background: #ffe071;
+    color: maroon;
+    transform: translateX(-4px);
+}
+
+.anxiety-hero-social span{
+    margin-top: 12px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    white-space: nowrap;
+    text-shadow: 0 2px 8px rgba(0,0,0,.35);
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+.anxiety-carousel-arrow{
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: rgb(241, 193, 103);
+    opacity: 1;
+    transform: none;
+    z-index: 5;
+}
+
+.anxiety-carousel-arrow i{
+    color: #ffffff;
+    font-size: 28px;
+}
+
+.anxiety-hero-section .carousel-control-prev{
+    top: auto;
+    left: 28px;
+    right: auto;
+    bottom: 28px;
+}
+
+.anxiety-hero-section .carousel-control-next{
+    top: auto;
+    left: 104px;
+    right: auto;
+    bottom: 28px;
+}
+
+.anxiety-hero-section .carousel-control-prev,
+.anxiety-hero-section .carousel-control-next{
+    display: inline-flex;
+}
+
+.anxiety-hero-section .carousel-control-prev:hover,
+.anxiety-hero-section .carousel-control-next:hover{
+    background: #ffe071;
+}
+
+.anxiety-hero-section .carousel-control-prev:hover i,
+.anxiety-hero-section .carousel-control-next:hover i{
+    color: maroon;
+}
+/* ===== Navbar Ke Baad Hero Carousel CSS End ===== */
+
+/* ===== Floating WhatsApp And Call Button CSS Start ===== */
+.anxiety-floating-actions{
+    position: fixed;
+    left: 14px;
+    bottom: 56px;
+    z-index: 9999;
+    display: grid;
+    gap: 8px;
+    max-width: calc(100vw - 28px);
+}
+
+.anxiety-floating-actions a{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-weight: 800;
+    box-shadow: 0 12px 28px rgba(0,0,0,.18);
+    box-sizing: border-box;
+}
+
+.anxiety-whatsapp{
+    background: #ffffff;
+    color: #3b6b4d;
+    border-radius: 8px;
+    padding: 6px 10px 6px 6px;
+    font-size: 25px;
+}
+
+.anxiety-whatsapp i{
+    color: #10c95b;
+}
+
+.anxiety-call{
+    background: #ec1515;
+    color: #ffffff;
+    min-width: 178px;
+    border-radius: 8px;
+    padding: 7px 14px 7px 8px;
+    font-size: 15px;
+    line-height: 1.05;
+    text-transform: uppercase;
+}
+
+.anxiety-call i{
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+}
+/* ===== Floating WhatsApp And Call Button CSS End ===== */
+
+/* ===== What To Expect Section CSS Start ===== */
+.anxiety-expect-section{
+    padding: 60px 0 96px;
+    background: #ffffff;
+}
+
+.anxiety-expect-section .row{
+    align-items: flex-start !important;
+}
+
+.anxiety-image-collage{
+    position: relative;
+    min-height: 560px;
+    margin-top: 0;
+}
+
+.anxiety-image-collage img{
+    position: absolute;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.anxiety-collage-one{
+    left: -40px;
+    top: 40px;
+    width: 48%;
+    height: 220px;
+    object-position: center;
+}
+
+.anxiety-collage-two{
+    right: -20px;
+    top: -10px;
+    width: 62%;
+    height: 330px;
+    object-position: left top;
+}
+
+.anxiety-collage-three{
+    left: 6%;
+    bottom: -10px;
+    width: 86%;
+    height: 360px;
+    border: 7px solid #ffffff;
+    object-position: center;
+}
+
+.anxiety-section-label{
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    color: #7a817e;
+    font-size: 28px;
+    margin-bottom: 0px;
+}
+
+.anxiety-section-label img{
+    width: 70px;
+    height: auto;
+    object-fit: contain;
+}
+
+.anxiety-expect-section h2,
+.anxiety-location-section h2{
+    color:rgb(241, 193, 103);
+    font-size:40px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.anxiety-expect-section p{
+    color: #777;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.55;
+    
+}
+.anxiety-expect-section a{
+    text-decoration:none;
+}
+
+.anxiety-primary-btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    min-height: 40px;
+    margin-top: 18px;
+    padding: 10px 12px 10px 34px;
+    border-radius: 999px;
+    background: #ffe071;
+    color: maroon;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.anxiety-primary-btn span{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: maroon;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+/* ===== What To Expect Section CSS End ===== */
+
+/* ===== Dark About Treatment Section CSS Start ===== */
+.anxiety-dark-info-section{
+    position: relative;
+    padding: 90px 0 80px;
+    background: url(assets/image/backgroundimage1.png)center center no-repeat;
+     background-size: cover;   
+}
+
+
+.anxiety-section-label.light{
+    color: #ffe071;
+    font-size: 30px;
+    font-weight: 600;
+    
+    
+}
+.anxiety-dark-info-section a{
+    text-decoration: none;
+}
+
+
+.anxiety-dark-info-section h2{
+    max-width: 900px;
+    color: #ffffff;
+    font-size: 42px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.anxiety-dark-info-section p{
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 28px;
+}
+/* ===== Dark About Treatment Section CSS End ===== */
+
+/*======= Overcoming Your Anxiety page  start===*/
+.anxiety-section{
+    padding: 40px 0;
+    background: #f8f7f4;
+}
+
+.anxiety-image img{
+    width: 100%;
+    height:400px;
+    border-radius: 12px;
+    display: block;
+}
+
+.anxiety-label{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: rgb(241, 193, 103);
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.anxiety-label i{
+    font-size: 30px;
+}
+
+.anxiety-content h2{
+    font-size: 40px;
+    font-weight: 700;
+    color: rgb(241, 193, 103);
+    margin-bottom: 30px;
+}
+.anxiety-content a{
+    text-decoration: none;}
+
+.anxiety-content p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #7d7d7d;
+    margin-bottom: 20px;
+}
+@media(max-width:768px){
+
+    .anxiety-section{
+        padding: 50px 0;
+    }
+
+    .anxiety-content h2{
+        font-size: 34px;
+    }
+
+    .anxiety-content p{
+        font-size: 18px;
+    }
+
+    .anxiety-label{
+        font-size: 18px;
+    }
+}
+/*========Overcoming Your Anxiety page  end====*/
+
+
+
+
+/* ===== Contact Form Section CSS Start ===== */
+.anxiety-contact-section{
+    position: relative;
+    padding: 70px 0;
+    min-height: 560px;
+    overflow: hidden;
+}
+
+.anxiety-contact-bg{
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(0,77,67,.24), rgba(0,77,67,.1)),
+        url("assets/image/anxietybackgroundimage3.png") center / cover;
+}
+
+.anxiety-form-card{
+    position: relative;
+    z-index: 2;
+   background:
+        linear-gradient(rgba(64, 129, 120, 0.96), rgba(0,77,67,.96)),
+        url("assets/image/backgroundimage7.png") center / cover;
+    border: 3px solid rgba(255,255,255,.82);
+    border-radius: 12px;
+    padding: clamp(28px, 4vw, 64px);
+    color: #ffffff;
+}
+
+.anxiety-form-card h2{
+    font-size:30px;
+    font-weight: 800;
+    margin-bottom: 34px;
+}
+
+.anxiety-form-card form{
+    display: grid;
+    gap: 20px;
+}
+
+.anxiety-form-card input,
+.anxiety-form-card textarea{
+    width: 100%;
+    border: 3px solid rgba(255,255,255,.24);
+    border-radius: 12px;
+    background: rgba(255,255,255,.08);
+    color: #ffffff;
+    padding: 15px 20px;
+    font-size: 16px;
+    outline: none;
+}
+
+.anxiety-form-card input::placeholder,
+.anxiety-form-card textarea::placeholder{
+    color: #ffffff;
+}
+
+.anxiety-form-card textarea{
+    min-height: 140px;
+    resize: vertical;
+}
+
+.anxiety-form-card button{
+    width: max-content;
+    border: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px 10px 36px;
+    min-height: 60px;
+    border-radius: 999px;
+    background: #ffe071;
+    color: maroon;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.anxiety-form-card button span{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background:maroon;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+/* ===== Contact Form Section CSS End ===== */
+
+/* ===== Location Section CSS Start ===== */
+.anxiety-location-section{
+    padding: 40px 0 80px;
+    background:
+        linear-gradient(rgba(246,244,238,.96), rgba(246,244,238,.96)),
+        url("assets/image/backgroundimage9.png") center / cover;
+}
+
+.anxiety-location-copy h3{
+    color: rgb(241, 193, 103);
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.anxiety-location-copy p{
+    color: #80827e;
+    font-size: 20px;
+    line-height: 1.2;
+
+}
+
+.anxiety-map-box{
+    min-height: 320px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 18px 44px rgba(0,0,0,.12);
+}
+
+.anxiety-map-box iframe{
+    width: 100%;
+    height: 420px;
+    border: 0;
+    display: block;
+}
+/* ===== Location Section CSS End ===== */
+
+/* ===== Footer Section CSS Start ===== */
+/* Alcohol page footer uses the same .footer-section CSS as the home page. */
+/* ===== Footer Section CSS End ===== */
+
+/* ===== Alcohol Treatment Page Responsive CSS Start ===== */
+@media (max-width: 1199px){
+    .anxiety-image-collage{
+        max-width: 720px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 767px){
+    .anxiety-hero-section{
+        padding: 0 10px 18px;
+    }
+
+    .anxiety-carousel-arrow{
+        width: 34px;
+        height: 34px;
+    }
+
+    .anxiety-carousel-arrow i{
+        font-size: 16px;
+    }
+
+    .anxiety-hero-section .carousel-control-prev{
+        left: 10px;
+        right: auto;
+        bottom: 10px;
+    }
+
+    .anxiety-hero-section .carousel-control-next{
+        left: 50px;
+        right: auto;
+        bottom: 10px;
+    }
+
+    .anxiety-hero-social{
+        top: 8px;
+        right: 8px;
+        gap: 4px;
+    }
+
+    .anxiety-hero-social a{
+        width: 26px;
+        height: 26px;
+        border-width: 1px;
+        font-size: 12px;
+    }
+
+    .anxiety-hero-social span{
+        display: none;
+    }
+
+    .anxiety-expect-section,
+    .anxiety-location-section{
+        padding: 20px 0;
+    }
+
+    .anxiety-image-collage{
+        min-height: auto;
+        display: grid;
+        gap: 14px;
+        margin-top: 0;
+    }
+
+    .anxiety-image-collage img{
+        position: static;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+     .anxiety-collage-one,
+    .anxiety-collage-two{
+        display: none !important;
+    }
+
+    .anxiety-collage-three{
+        display: block !important;
+        width: 100%;
+        height: auto;
+    }
+
+
+    .anxiety-collage-three{
+        border: 0;
+    }
+
+    .anxiety-section-label{
+        font-size: 20px;
+        gap: 10px;
+        margin-bottom: 18px;
+    }
+
+    .anxiety-section-label img{
+        width:34px;
+        height: 34px;
+    }
+
+    .anxiety-expect-section h2,
+    .anxiety-dark-info-section h2,
+    .anxiety-location-section h2{
+        font-size: 36px;
+    }
+
+    .anxiety-expect-section p,
+    .anxiety-dark-info-section p,
+    .anxiety-location-copy p{
+        font-size: 18px;
+    }
+
+    .anxiety-primary-btn,
+    .anxiety-form-card button{
+        width: 100%;
+        justify-content: center;
+        padding-left: 16px;
+        font-size: 18px;
+    }
+
+    .anxiety-dark-info-section{
+        padding: 80px 0 95px;
+    }
+
+    .anxiety-contact-section{
+        padding: 44px 0;
+        min-height: auto;
+    }
+
+    .anxiety-form-card input,
+    .anxiety-form-card textarea{
+        font-size: 18px;
+        padding: 18px 20px;
+    }
+
+}
+/* ===== anxiety addiciton Page Responsive CSS End ===== */
+
+/* ==========================
+   anxiety addiction PAGE CSS END
+========================== */
+
+/* ========= gallery section start======= */
+.gallery-page-hero{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    padding: 20px;
+    background: #f7f5ef;
+    overflow: hidden;
+}
+
+/* LEFT SIDE */
+
+.gallery-hero-copy{
+    position: relative;
+    background:url("assets/image/gallerybackgroundimage1.png") center/cover;
+    color: #fff;
+
+    
+
+    min-height: 360px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding:60px;
+    padding-top: 40px;
+}
+
+.gallery-hero-copy::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -20px;
+    width: 40px;
+    height: 100%;
+    background: rgb(241,193,103);
+    transform: skewX(-6deg);
+    z-index: 5;
+}
+
+/* Breadcrumb */
+
+.gallery-hero-copy .breadcrumb{
+    margin-bottom: 0px;
+}
+
+.gallery-hero-copy .breadcrumb-item,
+.gallery-hero-copy .breadcrumb-item a{
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.gallery-hero-copy .breadcrumb-item.active{
+    color: #fff;
+}
+
+.gallery-hero-copy .breadcrumb{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.gallery-hero-copy .breadcrumb-item{
+    display: flex;
+    align-items: center;
+}
+
+.gallery-hero-copy .breadcrumb-item + .breadcrumb-item::before{
+    content: "→";
+    color: #fff;
+    font-size: 35px;
+    font-weight: 700;
+    padding: 0 15px;
+    line-height: 1;
+}
+
+/* Heading */
+
+.gallery-hero-copy h1{
+    font-size: 58px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* RIGHT SIDE */
+
+.gallery-hero-media{
+    min-height: 360px;
+    overflow: hidden;
+} 
+    
+
+
+.gallery-hero-media img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width:991px){
+
+    .gallery-page-hero{
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .gallery-hero-copy{
+        min-height: 300px;
+        border-radius: 20px;
+        padding: 60px 35px;
+    }
+
+    .gallery-hero-copy::after{
+        display: none;
+    }
+
+    .gallery-hero-copy h1{
+        font-size: 60px;
+    }
+
+    .gallery-hero-copy .breadcrumb-item,
+    .gallery-hero-copy .breadcrumb-item a{
+        font-size: 20px;
+    }
+
+    /* IMAGE HIDE */
+
+    .gallery-hero-media{
+        display: none;
+    }
+}
+
+@media (max-width:767px){
+
+    .gallery-page-hero{
+        padding: 12px;
+    }
+
+    .gallery-hero-copy{
+        min-height: 240px;
+        padding: 40px 25px;
+    }
+
+    .gallery-hero-copy h1{
+        font-size: 48px;
+    }
+
+    .gallery-hero-copy .breadcrumb{
+        margin-bottom: 15px;
+    }
+
+    .gallery-hero-copy .breadcrumb-item,
+    .gallery-hero-copy .breadcrumb-item a{
+        font-size: 18px;
+    }
+}
